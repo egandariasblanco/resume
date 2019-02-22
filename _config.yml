@@ -17,8 +17,8 @@ title: resume
 email: men2dev@gmail.com
 description: > # this means to ignore newlines until "baseurl:"
   resume
-baseurl: "resume" # the subpath of your site, e.g. /blog
-url: "https://men2dev.github.io/resume/" # the base hostname & protocol for your site
+baseurl: "" # the subpath of your site, e.g. /blog
+url: "https://men2dev.github.io/resume" # the base hostname & protocol for your site
 twitter_username: men2dev
 github_username:  men2dev
 
