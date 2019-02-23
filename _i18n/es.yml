@@ -1,0 +1,24 @@
+global:
+  english: EN
+  spanish: ES
+site:
+  title: men2dev
+  email: men2dev@gmail.com
+  description: > # this means to ignore newlines until "baseurl:"
+    Curriculum Vitae
+contact:
+  title: Información de contacto
+education:
+  title: Formación académica
+languages:
+  title: Idiomas
+skills:
+  title: Capacidades
+work:
+  title: Experiencia profesional
+experience:
+  currently: actualmente
+projects:
+  title: Proyectos
+certificaciones:
+  title: Certifications

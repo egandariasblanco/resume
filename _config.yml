@@ -14,17 +14,20 @@
 # You can create any custom variable you would like, and they will be accessible
 # in the templates via {{ site.myvariable }}.
 title: resume
+permalink: /:title/
 email: men2dev@gmail.com
 description: > # this means to ignore newlines until "baseurl:"
   resume
 baseurl: "" # the subpath of your site, e.g. /blog
 url: "https://men2dev.github.io/resume" # the base hostname & protocol for your site
-twitter_username: men2dev
-github_username:  men2dev
+languages:  ["es", "en"]
+languageNames:
+  es: Español
+  en: English
+exclude_from_localizations: ["assets", "css", "node_modules", "scripts"]
 
 # Build settings
 markdown: kramdown
-permalink: pretty
 exclude: [
   "node_modules",
   "LICENSE",

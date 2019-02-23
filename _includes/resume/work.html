@@ -4,7 +4,7 @@
       <svg class="icon icon-suitcase">
         <use xlink:href="#icon-suitcase"></use>
       </svg>
-      <span class="title">Professional Experience</span>
+      <span class="title">{% translate work.title%}</span>
     </h2>
   </header>
 
@@ -14,7 +14,7 @@
       <h2 class="work__position">{{ experience.position }}</h2>
       <h3>
         <span class="work__company">{{ experience.name }}</span> |
-        <span class="work__dates">{{experience.startDate | date: "%Y" }} - {{experience.endDate | date: "%Y" }}</span>
+        <span class="work__dates">{{experience.startDate | date: "%Y" }}{% if experience.endDate == ""%} - {% translate experience.currently %} {% elsif experience.endDate != "" %} - {{experience.endDate | date: "%Y" }}{% endif%}</span>
         {% unless experience.location == null %}
         <div class="location"> <svg class="icon icon-location">
             <use xlink:href="#icon-location"></use>

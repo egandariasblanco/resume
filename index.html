@@ -12,7 +12,7 @@ layout: default
       </header>
     </section>
   </div>
-  
+
   <div class="content">
     {% include resume/work.html %}
     {% include resume/projects.html %}
@@ -20,15 +20,26 @@ layout: default
   </div>
 
   <div class="sidebar">
-    <aside>
-      {% include resume/contact.html %}
-      {% include resume/skills.html %}
-      {% include resume/languages.html %}
-    </aside>
+    <div>
+      <aside>
+        {% include resume/contact.html %}
+      </aside>
+    </div>
+    <div>
+      <aside>
+        {% include resume/certifications.html %}
+      </aside>
+    </div>
+    <div>
+      <aside>
+        {% include resume/languages.html %}
+      </aside>
+    </div>
+
   </div>
 
   <div class="footer">
-  {% include resume/disclaimer.html %}
+    {% include resume/disclaimer.html %}
   </div>
 </div>
- <!--{% include example.html %} -->
+<!--{% include example.html %} -->

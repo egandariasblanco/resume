@@ -128,6 +128,9 @@ gulp.task('serve', ['jekyll-build'], () => {
 
   // Watch _data changes.
   gulp.watch('_data/**/*.json', ['jekyll-build']);
+
+  // Watch _i18n changes.
+  gulp.watch('_i18n/**/*.yml', ['jekyll-build']);
 });
 
 gulp.task('generate-service-worker', (callback) => {
@@ -156,10 +159,11 @@ gulp.task('revert-config', () => {
 });
 
 // Fonts
-gulp.task('fonts', function() {
+gulp.task('fonts', function () {
   return gulp.src([
-                  'assets/fonts/*.*'])
-          .pipe(gulp.dest('./_site/assets/fonts'));
+      'assets/fonts/*.*'
+    ])
+    .pipe(gulp.dest('./_site/assets/fonts'));
 });
 
 gulp.task('jekyll-build', ['pug', 'scripts', 'scss', 'fonts'], $.shell.task(['jekyll build']));

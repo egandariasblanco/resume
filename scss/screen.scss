@@ -56,17 +56,20 @@
 
     .sidebar {
         grid-area: sidebar;
-
+        display:grid;
+       
         @include mq($until: tablet) {
             border-top: 0.75rem solid #f6f6f6;
             border-radius: 0.125rem;
             padding: 1.5rem 3.5rem 0 1.5rem;
+            grid-template-rows: 1fr;
         }
 
         @include mq($from: tablet) {
             border-right: 0.75rem solid #f6f6f6;
             border-radius: 0.125rem;
             padding: 1.5rem 2.5rem 0 3.5rem;
+            grid-template-rows: 3fr 1fr 1fr;
         }
 
         ul {
@@ -128,10 +131,14 @@
         }
     }
 
-
     .contact {
         font-family: 'IBM Plex Mono', 'Menlo', 'DejaVu Sans Mono', 'Bitstream Vera Sans Mono', Courier, monospace;
     }
 
+    .disclaimer {
+        text-transform: uppercase;
+        padding: 1rem;
+        background: #f6f6f6;
+    }
 
 }

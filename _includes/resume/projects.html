@@ -4,7 +4,7 @@
         <h2>
             <svg class="icon icon-folder-open">
                 <use xlink:href="#icon-folder-open"></use>
-            </svg><span class="title"> Projects</span>
+            </svg><span class="title">{% translate projects.title%}</span>
         </h2>
     </header>
 
@@ -14,8 +14,7 @@
             <h2 class="project__name">{{project.name}}</h2>
             <h3>
                 <span class="project__entity">{{ project.entity }}</span> |
-                <span class="project__dates">{{project.startDate | date: "%Y" }} - {{project.endDate | date: "%Y"
-                    }}</span>
+                <span class="project__dates">{{project.startDate | date: "%Y" }} {% if experience.endDate == ""%} {% elsif project.endDate != "" %} - {{project.endDate | date: "%Y" }}{% endif%}</span>
                     {% unless experience.location == null %}
                 <div class="location"> <svg class="icon icon-location">
                         <use xlink:href="#icon-location"></use>
