@@ -125,6 +125,9 @@ gulp.task('serve', ['jekyll-build'], () => {
 
   // Watch JavaScript changes.
   gulp.watch('_scripts/**/*.js', ['scripts']);
+
+  // Watch _data changes.
+  gulp.watch('_data/**/*.json', ['jekyll-build']);
 });
 
 gulp.task('generate-service-worker', (callback) => {
