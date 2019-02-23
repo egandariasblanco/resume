@@ -1,8 +1,10 @@
 @charset "utf-8";
 
 // Import partials from `sass_dir` (defaults to `_sass`)
-@import "fonts";
 @import "_normalize";
 @import "icon-font";
+@import "fonts";
+@import "fluid-type";
+@import 'mixins/_mq';
 @import "screen";
 @import "print"

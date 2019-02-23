@@ -1,80 +1,33 @@
-<section class="main-block">
+<section class="work">
+  <header>
     <h2>
-      <!--<i class="fa fa-suitcase"></i> Experiences-->
       <svg class="icon icon-suitcase">
         <use xlink:href="#icon-suitcase"></use>
-      </svg><span class="name"> Experiences</span>
+      </svg>
+      <span class="title">Professional Experience</span>
     </h2>
-    <section class="blocks">
-      <div class="date">
-        <span>2015</span><span>present</span>
-      </div>
-      <div class="decorator">
-      </div>
-      <div class="details">
-        <header>
-          <h3>Some Position</h3>
-          <span class="place">Some Workplace</span>
-          <!--<span class="location">(remote)</span>-->
-          <span class="location"> <svg class="icon icon-location">
-              <use xlink:href="#icon-location"></use>
-            </svg> (remote)</span>
-        </header>
-        <div>
-          <ul>
-            <li>Lorem ipsum dolor sit amet, consectetur adipiscing elit</li>
-            <li>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin nec mi ante. Etiam odio eros,
-              placerat eu metus id, gravida eleifend odio. Vestibulum dapibus pharetra odio, egestas ullamcorper
-              ipsum congue ac. Maecenas viverra tortor eget convallis vestibulum. Donec pulvinar venenatis est, non
-              sollicitudin metus laoreet sed. Fusce tincidunt felis nec neque aliquet porttitor</li>
-          </ul>
-        </div>
-      </div>
-    </section>
-    <section class="blocks">
-      <div class="date">
-        <span>2014</span><span>2015</span>
-      </div>
-      <div class="decorator">
-      </div>
-      <div class="details">
-        <header>
-          <h3>Another Position</h3>
-          <span class="place">Some Workplace</span>
-          <span class="location"> <svg class="icon icon-location">
-              <use xlink:href="#icon-location"></use>
-            </svg> Some city, Some country</span>
-        </header>
-        <div>
-          <ul>
-            <li>Lorem ipsum dolor sit amet, consectetur adipiscing elit</li>
-            <li>Lorem ipsum dolor sit amet, consectetur adipiscing elit</li>
-            <li>Lorem ipsum dolor sit amet, consectetur adipiscing elit</li>
-          </ul>
-        </div>
-      </div>
-    </section>
-    <section class="blocks">
-      <div class="date">
-        <span>2013</span><span>2014</span>
-      </div>
-      <div class="decorator">
-      </div>
-      <div class="details">
-        <header>
-          <h3>Yet Another Job Position</h3>
-          <span class="place">Some Workplace</span>
-          <span class="location"> <svg class="icon icon-location">
-              <use xlink:href="#icon-location"></use>
-            </svg> Some city, Some country</span>
-        </header>
-        <div>
-          <ul>
-            <li>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin nec mi ante. Etiam odio eros,
-              placerat eu metus id, gravida eleifend odio</li>
-            <li>Lorem ipsum dolor sit amet, consectetur adipiscing elit</li>
-          </ul>
-        </div>
-      </div>
-    </section>
+  </header>
+
+  {% for experience in site.data.resume.work %}
+  <section>
+    <header>
+      <h2 class="work__position">{{ experience.position }}</h2>
+      <h3>
+        <span class="work__company">{{ experience.name }}</span> |
+        <span class="work__dates">{{experience.startDate | date: "%Y" }} - {{experience.endDate | date: "%Y" }}</span>
+        {% unless experience.location == null %}
+        <div class="location"> <svg class="icon icon-location">
+            <use xlink:href="#icon-location"></use>
+          </svg> {{experience.location}} </div>{% endunless%}
+      </h3>
+    </header>
+
+    <p>{{experience.summary}}</p>
+    <ul>
+      {% for highlight in experience.highlights %}
+      <li>{{highlight}}</li>
+      {% endfor %}
+    </ul>
   </section>
+  {% endfor %}
+</section>

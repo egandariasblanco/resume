@@ -1,9 +1,13 @@
-<div class="side-block" id="languages">
-    <h1>
-        Languages
-    </h1>
-    <ul>
-        <li>English</li>
-        <li>Native speaker</li>
-    </ul>
-</div>
+<section class="languages">
+    <header >
+        <h2>
+            <span class="title">Languages</span></h2>
+    </header>
+    <section>
+        <ul>
+            {% for language in site.data.resume.languages %}
+            <li>{{language.language}} - {{language.fluency}}</li>
+            {% endfor%}
+        </ul>
+    </section>
+</section>

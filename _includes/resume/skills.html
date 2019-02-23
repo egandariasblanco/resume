@@ -1,13 +1,13 @@
-<div class="side-block" id="skills">
-    <h1>
-        Skills
-    </h1>
-    <ul>
-        <li>Omnipresence</li>
-        <li>Anonymity</li>
-    </ul>
-    <ul>
-        <li>Ordinarity</li>
-        <li>No name rights</li>
-    </ul>
-</div>
+<section class="skills">
+    <header >
+        <h2>
+                <span class="title">Skills</span></h2>
+    </header>
+    <section>
+        <ul>
+            {% for skill in site.data.resume.skills %}
+            <li>{{skill.name}} - {{skill.level}}</li>
+            {% endfor%}
+        </ul>
+    </section>
+</section>

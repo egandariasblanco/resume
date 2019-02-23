@@ -3,22 +3,32 @@ layout: default
 ---
 {% include symbol-defs.svg %}
 
-<section id="main">
-  <header id="title">
-    <h1>{{ site.data.resume.basics.name }}</h1>
-    <span class="subtitle">{{ site.data.resume.basics.label }}</span>
-  </header>
+<div class="wrapper">
+  <div class="header">
+    <section id="applicant">
+      <header class="applicant">
+        <h1 class="applicant__name">{{ site.data.resume.basics.name }}</h1>
+        <h3 class="applicant__subtitle">{{ site.data.resume.basics.label }}</h3>
+      </header>
+    </section>
+  </div>
   
-  {% include resume/work.html %}
-  {% include resume/projects.html %}
-  {% include resume/education.html %}
-</section>
+  <div class="content">
+    {% include resume/work.html %}
+    {% include resume/projects.html %}
+    {% include resume/education.html %}
+  </div>
 
-<aside id="sidebar">
-  {% include resume/contact.html %}
-  {% include resume/skills.html %}
-  {% include resume/languages.html %}
+  <div class="sidebar">
+    <aside>
+      {% include resume/contact.html %}
+      {% include resume/skills.html %}
+      {% include resume/languages.html %}
+    </aside>
+  </div>
+
+  <div class="footer">
   {% include resume/disclaimer.html %}
-</aside>
-
-<!-- {% include example.html %} -->
+  </div>
+</div>
+ <!--{% include example.html %} -->

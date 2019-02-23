@@ -1,73 +1,33 @@
-<section class="main-block">
-    <h2>
-        <svg class="icon icon-folder-open">
-            <use xlink:href="#icon-folder-open"></use>
-        </svg> Selected Projects
-    </h2>
-    <section class="blocks">
-        <div class="date">
-            <span>2015</span><span>2016</span>
-        </div>
-        <div class="decorator">
-        </div>
-        <div class="details">
-            <header>
-                <h3>Some Project 1</h3>
-                <span class="place">Some workplace</span>
-            </header>
-            <div>
-                <ul>
-                    <li>Lorem ipsum dolor sit amet, consectetur adipiscing elit</li>
-                    <li>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin nec mi ante. Etiam odio eros,
-                        placerat eu metus id, gravida eleifend odio. Vestibulum dapibus pharetra odio, egestas
-                        ullamcorper
-                        ipsum congue ac</li>
-                    <li>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin nec mi ante. Etiam odio eros,
-                        placerat eu metus id, gravida eleifend odio</li>
-                </ul>
-            </div>
-        </div>
+<section class="selected-projects">
+    <header>
+        <h2>
+            <svg class="icon icon-folder-open">
+                <use xlink:href="#icon-folder-open"></use>
+            </svg><span class="title"> Projects</span>
+        </h2>
+    </header>
+
+    {% for project in site.data.resume.projects %}
+    <section>
+        <header class="projects__name">
+            <h2>{{project.name}}</h2>
+            <h3>
+                <span class="projects__entity">{{ project.entity }}</span> |
+                <span class="projects__dates">{{project.startDate | date: "%Y" }} - {{project.endDate | date: "%Y"
+                    }}</span>
+                {% unless experience.location == null %}
+                <div class="location"> <svg class="icon icon-location">
+                        <use xlink:href="#icon-location"></use>
+                    </svg> {{project.location}}</div>
+                {% endunless %}
+            </h3>
+        </header>
+        <p>{{project.description}}</p>
+        <ul>
+            {% for highlight in project.highlights %}
+            <li>{{highlight}}</li>
+            {% endfor %}
+        </ul>
     </section>
-    <section class="blocks">
-        <div class="date">
-            <span>2014</span><span>2015</span>
-        </div>
-        <div class="decorator">
-        </div>
-        <div class="details">
-            <header>
-                <h3>Some Project 2</h3>
-                <span class="place">Some workplace</span>
-            </header>
-            <div>
-                <ul>
-                    <li>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin nec mi ante. Etiam odio eros,
-                        placerat eu metus id, gravida eleifend odio. Vestibulum dapibus pharetra odio, egestas
-                        ullamcorper
-                        ipsum congue ac. Maecenas viverra tortor eget convallis vestibulum. Donec pulvinar venenatis
-                        est, non
-                        sollicitudin metus laoreet sed. Fusce tincidunt felis nec neque aliquet porttitor</li>
-                </ul>
-            </div>
-        </div>
-    </section>
-    <section class="blocks">
-        <div class="date">
-            <span>2014</span>
-        </div>
-        <div class="decorator">
-        </div>
-        <div class="details">
-            <header>
-                <h3>Some Project 3</h3>
-                <span class="place">Some workplace</span>
-            </header>
-            <div>
-                <ul>
-                    <li>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin nec mi ante. Etiam odio eros,
-                        placerat eu metus id, gravida eleifend odio</li>
-                </ul>
-            </div>
-        </div>
-    </section>
+    {% endfor %}
 </section>
