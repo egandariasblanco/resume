@@ -9,8 +9,10 @@ const $ = gulpLoadPlugins();
 
 // Delete the _site directory.
 gulp.task('cleanup-build', () => {
-  return gulp.src('_site', {read: false})
-      .pipe($.clean());
+  return gulp.src('_site', {
+      read: false
+    })
+    .pipe($.clean());
 });
 
 // Minify the HTML.
@@ -43,10 +45,10 @@ gulp.task('minify-images', () => {
 // Concatenate, transpiles ES2015 code to ES5 and minify JavaScript.
 gulp.task('scripts', () => {
   gulp.src([
-    // Note: You need to explicitly list your scripts here in the right order
-    //       to be correctly concatenated
-    './_scripts/main.js'
-  ])
+      // Note: You need to explicitly list your scripts here in the right order
+      //       to be correctly concatenated
+      './_scripts/main.js'
+    ])
     .pipe($.concat('main.min.js'))
     .pipe($.babel())
     .pipe($.uglify())
@@ -75,22 +77,22 @@ gulp.task('css', () => {
 
 // Compile scss to css.
 gulp.task('scss', () => {
-    return gulp.src('scss/main.scss')
-        .pipe($.sass({
-            includePaths: ['css'],
-            onError: browserSync.notify
-        }))
-        .pipe(gulp.dest('css'));
+  return gulp.src('scss/main.scss')
+    .pipe($.sass({
+      includePaths: ['css'],
+      onError: browserSync.notify
+    }))
+    .pipe(gulp.dest('css'));
 });
 
 // Pug (Jade) to HTML.
 gulp.task('pug', () => {
   return gulp.src([
-    '_includes-pug/**/*.pug',
-    '!_site/node_modules/**'
-  ])
-  .pipe($.pug())
-  .pipe(gulp.dest('_includes'));
+      '_includes-pug/**/*.pug',
+      '!_site/node_modules/**'
+    ])
+    .pipe($.pug())
+    .pipe(gulp.dest('_includes'));
 });
 
 // Watch change in files.
@@ -136,21 +138,21 @@ gulp.task('generate-service-worker', (callback) => {
   }, callback);
 });
 
-  gulp.task('fix-config', () => {
-    gulp.src('_config.yml')
-      .pipe($.replace('baseurl: ""', 'baseurl: "resume"'))
-      .pipe($.clean())
-      .pipe(gulp.dest('.'));
-  });
+gulp.task('fix-config', () => {
+  gulp.src('_config.yml')
+    .pipe($.replace('baseurl: ""', 'baseurl: "resume"'))
+    .pipe($.clean())
+    .pipe(gulp.dest('.'));
+});
 
-  gulp.task('revert-config', () => {
-    gulp.src('_config.yml')
-        .pipe($.replace('baseurl: "resume"', 'baseurl: ""'))
-        .pipe($.clean())
-        .pipe(gulp.dest('.'));
-  });
+gulp.task('revert-config', () => {
+  gulp.src('_config.yml')
+    .pipe($.replace('baseurl: "resume"', 'baseurl: ""'))
+    .pipe($.clean())
+    .pipe(gulp.dest('.'));
+});
 
-gulp.task('jekyll-build', ['pug','scripts', 'scss'], $.shell.task(['jekyll build']));
+gulp.task('jekyll-build', ['pug', 'scripts', 'scss'], $.shell.task(['jekyll build']));
 
 gulp.task('jekyll-build-for-deploy', $.shell.task(['jekyll build']));
 
@@ -193,4 +195,3 @@ gulp.task('deploy', () => {
     'revert-config'
   )
 });
-
