@@ -56,11 +56,17 @@
 
     .sidebar {
         grid-area: sidebar;
-        padding: 1.5rem 2.5rem 0 3.5rem;
+
+        @include mq($until: tablet) {
+            border-top: 0.75rem solid #f6f6f6;
+            border-radius: 0.125rem;
+            padding: 1.5rem 3.5rem 0 1.5rem;
+        }
 
         @include mq($from: tablet) {
             border-right: 0.75rem solid #f6f6f6;
             border-radius: 0.125rem;
+            padding: 1.5rem 2.5rem 0 3.5rem;
         }
 
         ul {
@@ -100,16 +106,16 @@
         padding: 0;
     }
 
-    .work__position ,
-    .project__name{
+    .work__position,
+    .project__name {
         text-transform: uppercase;
     }
 
-    .work__company, 
-    .work__dates, 
+    .work__company,
+    .work__dates,
     .project__company,
-    .project__dates{
-       font-style: italic;
+    .project__dates {
+        font-style: italic;
     }
 
     .title {
@@ -118,14 +124,14 @@
 
     .location {
         @include mq($from: mobile) {
-            float:right;
+            float: right;
         }
     }
 
-    /*
+
     .contact {
         font-family: 'IBM Plex Mono', 'Menlo', 'DejaVu Sans Mono', 'Bitstream Vera Sans Mono', Courier, monospace;
     }
-    */
+
 
 }

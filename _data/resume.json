@@ -1,113 +1,243 @@
 {
   "basics": {
-    "name": "Carmen Rodríguez Vázquez",
-    "label": "Analista Programadora",
+    "name": "Endika Gandarias Blanco",
+    "label": "Gestor de Vigilancia Tecnológica",
     "image": "",
-    "email": "mentxu.r@gmail.com",
-    "phone": "653010881",
-    "url": "https://men2dev.github.io/resume/",
-    "summary": ""
+    "email": "egandariasblanco@gmail.com",
+    "phone": "649683988",
+    "summary": "",
+    "location": {
+      "address": "Antonio Amat Maiz 22 6B",
+      "postalCode": "01006",
+      "city": "Vitoria-Gasteiz",
+      "countryCode": "ES",
+      "region": "Álava"
+    },
+    "profiles": [
+      {
+        "network": "LinkedIn",
+        "username": "egandariasblanco",
+        "url": "https://www.linkedin.com/in/egandariasblanco"
+      }
+    ]
   },
   "work": [
     {
-      "name": "Centro de Cálculo de Álava",
+      "name": "Ikusnet S.L.L.",
       "location": "Vitoria-Gasteiz",
       "description": "",
-      "position": "Analista",
+      "position": "Becario Programador",
       "url": "",
-      "startDate": "2017-11-01",
-      "endDate": "Actualmente",
-      "summary": "",
-      "highlights": [
-        "En el equipo de desarrollo SCRUM de la plataforma de notificaciones y procedimiento sancionador (e-administración) .",
-        "Captura de requisitos, análisis y diseño de la plataforma.",
-        "Plan y ejecución de pruebas, aseguramiento de la calidad del producto."
-      ]
-    },
-    {
-      "name": "Entelgy Ibai",
-      "location": "Vitoria-Gasteiz",
-      "description": "",
-      "position": "Desarrolladora",
-      "url": "",
-      "startDate": "2017-07",
-      "endDate": "2017-11",
-      "summary": "Tareas de desarrollo de aplicaciones para el Centro de Cálculo de Álava",
-      "highlights": [
-        "En un equipo de desarrollo SCRUM.",
-        "Desarrollo de aplicaciones cliente/servidor Windows Forms en C#, NHibernate como ORM sobre SQL Server.",
-        "Utilizando Jenkins como herramienta de integración continua."
-      ]
-    },
-    {
-      "name": "HAZI",
-      "location": "Vitoria-Gasteiz",
-      "description": "",
-      "position": "Analista/Desarrolladora",
-      "url": "",
-      "startDate": "2008-07",
-      "endDate": "2017-07",
-      "summary": "",
-      "highlights": [
-        "Análisis y desarrollo de aplicaciones web utilizando tecnologías de servidor ASP, .NET (MVC, C#, VB.NET) y PHP.",
-        "Desarrollo y despliegue de Servicios Web Windows Communication Foundation WCF. Interconexión con servicios de terceros (SOAP, REST)",
-        "Diseño de sitios web responsive (RWD), HTML5, CSS3, uso de Bootstrap.",
-        "Javascript ES5/ES6, desarrollo de componentes jQuery.",
-        "Automatización de tareas de compilación y despliegue utilizando Grunt y Webpack.",
-        "Desarrollos sobre sistemas gestores de base de datos SQL Server, Oracle y SQLite.",
-        "Implementación de informes en SQL Server Reporting Services.",
-        "Desarrollo de procesos de integración de datos con SQL Server Integration Services.",
-        "Generación, explotación e intercambio de datos en XML: XSLT, XSD.",
-        "Desarrollo de aplicaciones nativas Android (Java) y backend de servicio.",
-        "Implantación y administración de Subversion como sistema de control de versiones.",
-        "Mantenimiento de aplicaciones cliente/servidor con Visual Basic.",
-        "Automatización de tareas, desarrollos sobre Microsoft Outlook (VBA).",
-        "Administración y configuración de servidores IIS 6 y 8.5.",
-        "Impartir cursos de formación técnica a otros desarrolladores de la empresa."
-      ]
-    },
-    {
-      "name": "F3",
-      "location": "Vitoria-Gasteiz",
-      "description": "",
-      "position": "Desarrolladora",
-      "url": "",
-      "startDate": "2012-06",
-      "endDate": "2012-09",
-      "summary": "Desarrollo de frontend y backend para la web www.clickoferta.es",
+      "startDate": "2005-04-01",
+      "endDate": "2005-06-01",
+      "summary": "Análisis y programación de una aplicación de tesorería en PHP.",
       "highlights": []
+    },
+    {
+      "name": "Lantek SMS",
+      "location": "Vitoria-Gasteiz",
+      "description": "",
+      "position": "Técnico de Soporte",
+      "url": "",
+      "startDate": "2007-06-01",
+      "endDate": "2008-08-01",
+      "summary": "",
+      "highlights": [
+        "Instalación y configuración de software para automatizar la programación de CNC, in situ.",
+        "Resolución de incidencias"
+      ]
+    },
+    {
+      "name": "Sopra Steria",
+      "location": "Vitoria-Gasteiz",
+      "description": "",
+      "position": "Técnico de Soporte Web",
+      "url": "",
+      "startDate": "2008-08-01",
+      "endDate": "2014-08-01",
+      "summary": "Realización de tareas de soporte web para EJIE S.A.",
+      "highlights": [
+        "Resolución de incidencias de usuario y de alarmas de sistema 24x7.",
+        "Investigación de problemas relacionados con incidencias repetitivas o bug de sistemas.",
+        "Automatización de tareas repetitivas.",
+        "Creación de utilidades mediante scripting para facilitar la administración de sistemas.",
+        "Participación en proyectos e instalaciones de productos en el cliente.",
+        "Consultoría y asesoramiento de soluciones técnicas.",
+        "Creación de herramienta de automatización de instalaciones de productos (Weblogic, Apache) y configuración de sistema para la solución de virtualización de sistemas TI mediante la utilización de Shell Script, Python y WLST.",
+        "Las tecnologías involucradas en todas estas tareas: Weblogic 5,8,9,10 y 11g, Apache 1.x y 2.x, WLST, Python y Shell Scripting, LDAP, Interwoven, Opendeploy, Oracle Service Bus, S.O. (Red Hat Linux, HP-UX), Hadoop, Oracle Enterprise Manager, Anthillpro."
+      ]
+    },
+    {
+      "name": "Sopra Steria",
+      "location": "Vitoria-Gasteiz",
+      "description": "",
+      "position": "Técnico de Soporte BBDD",
+      "url": "",
+      "startDate": "2014-08-01",
+      "endDate": "2015-01-01",
+      "summary": "Realización de tareas de soporte BBDD para EJIE S.A.",
+      "highlights": [
+        "Las tecnologías involucradas en todas estas tareas: Oracle 8 y 10, MongoDB, HBase , MySQL.",
+        "Apoyo en la resolución de incidencias para soporte web."
+      ]
+    },
+    {
+      "name": "Sopra Steria",
+      "location": "Vitoria-Gasteiz",
+      "description": "",
+      "position": "Gestor de tareas",
+      "url": "",
+      "startDate": "2015-01-01",
+      "endDate": "2016-04-01",
+      "summary": "Gestión y planificación de tareas para varios grupos de soporte técnico en EJIE S.A.",
+      "highlights": [
+        "Uso de metodologías ágiles Kanban y Scrum",
+        "Gestión de recursos y planificación de realización de tareas de 5 grupos de soporte",
+        "Realización de informes mensuales con estadísticas de carga de trabajo",
+        "Consultoría y asesoramiento técnico"
+      ]
+    },
+    {
+      "name": "GFI",
+      "location": "Vitoria-Gasteiz",
+      "description": "",
+      "position": "Gestor del proceso de Vigilancia Tecnológica",
+      "url": "",
+      "startDate": "2016-04-01",
+      "endDate": "",
+      "summary": "Responsable de la gestión del proceso de Vigilancia Tecnológica para EJIE S.A. Apoyo técnico en la realización de pruebas de concepto",
+      "highlights": [
+        "Realización de planificación anual del proceso y seguimiento del mismo para EJIE",
+        "Seguimiento y realización de informes de incidencias y mejoras realizadas con el equipo de proyectos de EJIE ",
+        "Redacción de noticias sobre tecnologías actuales (IoT, Cloud, Móvil y Social)",
+        "Búsqueda de tecnologías actuales que se puedan implantar en cliente",
+        "Realización de presentaciones y formaciones sobre nuevas tecnologías",
+        "Realización de pruebas de concepto:",
+        "JBoss 7",
+        "Solución HortonWorks de Big Data",
+        "OpenShift como orquestador de Dockers",
+        "Kaa como servidor para IoT",
+        "Análisis de microservicios",
+        "Ethereum como implementación de blockchain",
+        "ChatOps (Slack, Telegram, Teams, Hubot, Microsoft Bot Framework)",
+        "Uso de plataformas Cloud (Azure y AWS)",
+        "Integración contínua con Jenkins, Git y Nexus",
+        "Realización de aplicación móvil con plataforma OutSystems",
+        "Análisis de servicios cognitivos cloud.",
+        "DC/OS para dimensionamiento automático para tareas Jenkins"
+      ]
+    }
+  ],
+  "volunteer": [
+    {
+      "organization": "",
+      "position": "",
+      "url": "",
+      "startDate": "",
+      "endDate": "",
+      "summary": "",
+      "highlights": [
+      ]
     }
   ],
   "education": [
     {
+      "institution": "Instituto Politécnico Diocesanas Arriaga",
+      "area": "Desarrollo de aplicaciones informáticas",
+      "studyType": "C.F.G.S.",
+      "startDate": "2000-09-01",
+      "endDate": "2002-06-01",
+      "gpa": "7.2",
+      "courses": [
+      ]
+    },
+    {
       "institution": "Esc. Univ. De Ingeniería de Vitoria-Gasteiz UPV-EHU",
       "area": "Ing. Técnico en Informática de Gestión",
       "studyType": "Universitaria",
-      "startDate": "2002-09",
-      "endDate": "2006-07",
-      "gpa": "7.25",
-      "courses": []
+      "startDate": "2002-09-01",
+      "endDate": "2005-06-01",
+      "gpa": "6.35",
+      "courses": [
+      ]
     },
     {
-      "institution": "Universidad Alfonso X el Sabio",
-      "area": "Máster en Ingeniería de desarrollo para dispositivos móviles",
+      "institution": "Facultad de informática de San Sebastián UPV-EHU",
+      "area": "Ing. Informática",
       "studyType": "Universitaria",
-      "startDate": "2013-09",
-      "endDate": "2014-06",
-      "gpa": "8.7",
-      "courses": []
+      "startDate": "2005-09-01",
+      "endDate": "",
+      "gpa": "7.15",
+      "courses": [
+      ]
+    }
+  ],
+  "certifications" :[
+    {
+      "title": "Certified Scrum Master",
+      "date": "2015-12-01"
+    },
+    {
+      "title": "Oracle Weblogic Server 11g: System Administrator I",
+      "date": "2014-07"
+    },
+    {
+      "title": "ITIL Foundation V3",
+      "date": "2013-10"
+    }
+  ],
+  "awards": [
+    {
+      "title": "Business Game Álava",
+      "date": "2001-04-01",
+      "awarder": "Cámara de Comercio e Industria de Álava",
+      "summary": "Componente del equipo ganador del concurso de gestión de empresas."
+    }
+  ],
+  "publications": [
+    {
+      "name": "",
+      "publisher": "",
+      "releaseDate": "",
+      "url": "",
+      "summary": ""
+    }
+  ],
+  "skills": [
+    {
+      "name": "Téc. Sistemas Web",
+      "level": "",
+      "keywords": [
+        "Weblogic",
+        "Apache",
+        "Tomcat"
+      ]
     }
   ],
   "languages": [
     {
       "language": "Inglés",
-      "fluency": "Cambridge: Advanced (CAE)"
+      "fluency": "Nivel medio"
     },
     {
       "language": "Euskera",
-      "fluency": "HABE: C1 maila"
+      "fluency": "Nivel B1"
     }
   ],
+  "interests": [
+    {
+      "name": "",
+      "keywords": [
+      ]
+    }
+  ],
+  "references": [
+    {
+      "name": "",
+      "reference": ""
+    }
+  ],
+ 
   "meta": {
     "canonical": "https://raw.githubusercontent.com/jsonresume/resume-schema/master/resume.json",
     "version": "v1.0.0",

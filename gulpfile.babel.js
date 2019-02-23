@@ -158,8 +158,8 @@ gulp.task('revert-config', () => {
 // Fonts
 gulp.task('fonts', function() {
   return gulp.src([
-                  'assets/*.*'])
-          .pipe(gulp.dest('./_site/assets'));
+                  'assets/fonts/*.*'])
+          .pipe(gulp.dest('./_site/assets/fonts'));
 });
 
 gulp.task('jekyll-build', ['pug', 'scripts', 'scss', 'fonts'], $.shell.task(['jekyll build']));

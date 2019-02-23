@@ -9,7 +9,7 @@
   <script async src="{{ '/scripts/main.min.js' | relative_url }}"></script>
   <script>
     if ('serviceWorker' in navigator) {
-      navigator.serviceWorker.register("{{ " / sw.js " | relative_url }}").then(function () {
+      navigator.serviceWorker.register("{{ "/sw.js " | relative_url }}").then(function () {
         console.log("Service Worker Registered");
       });
     }
