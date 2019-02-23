@@ -34,7 +34,7 @@ gulp.task('minify-html', () => {
 
 // Optimize images.
 gulp.task('minify-images', () => {
-  gulp.src('images/**/*')
+  gulp.src('assets/images/**/*')
     .pipe($.imagemin({
       progressive: true,
       interlaced: true
@@ -152,7 +152,14 @@ gulp.task('revert-config', () => {
     .pipe(gulp.dest('.'));
 });
 
-gulp.task('jekyll-build', ['pug', 'scripts', 'scss'], $.shell.task(['jekyll build']));
+// Fonts
+gulp.task('fonts', function() {
+  return gulp.src([
+                  'assets/*.*'])
+          .pipe(gulp.dest('./_site/assets'));
+});
+
+gulp.task('jekyll-build', ['pug', 'scripts', 'scss', 'fonts'], $.shell.task(['jekyll build']));
 
 gulp.task('jekyll-build-for-deploy', $.shell.task(['jekyll build']));
 
