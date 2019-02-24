@@ -9,10 +9,6 @@
         font-family: 'Nunito', sans-serif;
     }
 
-    h3 {
-        font-family: 'IBM Plex Mono', monospace;
-    }
-
     .wrapper {
         display: grid;
         width: 100%;
@@ -20,17 +16,14 @@
         @include mq($until: tablet) {
             grid-template-columns: 1fr;
             grid-template-areas:
-                "header"
-                "content"
                 "sidebar"
-                "footer";
-
+                "content"
         }
 
         @include mq($from: tablet) {
-            grid-template-columns: 1fr 3fr;
+            grid-template-columns: 1fr 2fr;
             grid-template-areas:
-                "sidebar  content  content content"
+                "sidebar content  content content"
         }
 
         @include mq($from: wide) {
@@ -46,6 +39,14 @@
         grid-template-columns: 1fr;
 
         background-color: $content-background-color;
+
+        .summary {
+            padding-left: 3.5em;
+        }
+
+        h3 {
+            font-family: 'IBM Plex Mono', monospace;
+        }
 
         .script {
             position: relative;
@@ -70,86 +71,6 @@
             }
         }
 
-        >section {
-            display: grid;
-            width: 100%;
-            grid-template-columns: 3.5em 1fr;
-            grid-template-areas:
-                "header header"
-                "icon content";
-
-            header {
-                grid-area: header;
-                padding: 1em 0 1em 0;
-            }
-
-            .resume-section__icon-container {
-                grid-area: icon;
-                justify-self: end;
-                align-self: center;
-            }
-
-            .resume-section__icon {
-                display: inline-block;
-                width: 1em;
-                height: 1em;
-                stroke-width: 0;
-                stroke: currentColor;
-                fill: $sidebar-background-color;
-                background-color: $content-background-color;
-                border: 3px solid $sidebar-background-color;
-                border-radius: 24px;
-                padding: 0.5em;
-            }
-
-            .resume-section__content-container {
-                grid-area: content;
-            }
-
-            section {
-                margin-left: 1em;
-                padding-left: 2em;
-                border-left: 3px solid $sidebar-background-color;
-
-                *:last-child {
-                    margin: 0;
-                }
-            }
-
-            section:not(:last-of-type) {
-                *:last-child {
-                    margin-bottom: 0;
-                }
-            }
-
-            section:last-of-type {
-                *:last-child {
-                    margin-bottom: 1rem;
-                }
-            }
-
-            section:first-of-type:before {
-                content: "";
-                display: block;
-                position: relative;
-                top: 0%;
-                left: -2em;
-                width: 3%;
-                border-top: 3px solid $sidebar-background-color;
-            }
-
-            section:last-of-type:after {
-                content: "";
-                display: block;
-                position: relative;
-                top: 0%;
-                left: -2em;
-                width: 3%;
-                border-bottom: 3px solid $sidebar-background-color;
-            }
-
-        }
-
         .work__company,
         .education__type {
             text-transform: uppercase;
@@ -168,33 +89,132 @@
             background: teal;
             padding: 0.5em;
             float: right;
-            color: white
+            color: white;
+            position: relative;
+            transform: translateY(-25%);
+        }
+    }
+
+    .content>section:not(.summary),
+    .certifications {
+        display: grid;
+        width: 100%;
+        grid-template-columns: 3.5em 1fr;
+        grid-template-areas:
+            "header header"
+            "icon content";
+
+        header {
+            grid-area: header;
+            padding: 1em 0 1em 0;
+        }
+
+        .resume-section__icon-container {
+            grid-area: icon;
+            justify-self: end;
+            align-self: center;
+        }
+
+        .resume-section__icon {
+            display: inline-block;
+            width: 1em;
+            height: 1em;
+            stroke-width: 0;
+            stroke: currentColor;
+            fill: $sidebar-background-color;
+            background-color: $content-background-color;
+            border: 3px solid $sidebar-background-color;
+            border-radius: 24px;
+            padding: 0.5em;
+        }
+
+        .resume-section__content-container {
+            grid-area: content;
+        }
+
+        section {
+            margin-left: 1em;
+            padding-left: 2em;
+            border-left: 3px solid $sidebar-background-color;
+
+            *:last-child {
+                margin: 0;
+            }
+        }
+
+        section:not(:last-of-type) {
+            *:last-child {
+                margin-bottom: 0;
+            }
+        }
+
+        section:last-of-type {
+            *:last-child {
+                margin-bottom: 1rem;
+            }
+        }
+
+        section:first-of-type:before {
+            content: "";
+            display: block;
+            position: relative;
+            top: 0%;
+            left: -2em;
+            width: 3%;
+            border-top: 3px solid $sidebar-background-color;
+        }
+
+        section:last-of-type:after {
+            content: "";
+            display: block;
+            position: relative;
+            top: 0%;
+            left: -2em;
+            width: 3%;
+            border-bottom: 3px solid $sidebar-background-color;
+        }
+    }
+
+    .certifications {
+        section {
+            border-left: 3px solid $sidebar-primary-color;
+        }
+
+        section:first-of-type:before {
+            width: 10%;
+            border-top: 3px solid $sidebar-primary-color;
+        }
+
+        section:last-of-type:after {
+            width: 10%;
+            border-bottom: 3px solid $sidebar-primary-color;
+        }
+
+        header:first-of-type h2 {
+            text-align: center;
+            margin: 0.5em;
+            border: 1px solid $sidebar-primary-color;
+            padding: 0.5em;
+        }
+    }
+
+    .languages {
+        header:first-of-type h2 {
+            text-align: center;
+            margin: 0.5em;
+            border: 1px solid $sidebar-primary-color;
+            padding: 0.5em;
         }
     }
 
     .sidebar {
         grid-area: sidebar;
         background-color: $sidebar-background-color;
-    }
+        color: $sidebar-primary-color;
 
-
-    .applicant {
-        text-align: center;
-        border-width: 1px 1px 1px 1px;
-        border-color: black;
-        border-style: solid;
-        padding: 5rem 2.5rem 2.5rem 2.5rem;
-    }
-
-    .applicant__name {
-        font-size: 3rem;
-    }
-
-    .applicant__name,
-    .applicant__title {
-        text-transform: uppercase;
-        margin: 0;
-        padding: 0;
+        ul {
+            list-style-type: none;
+        }
     }
 
     .work__position,

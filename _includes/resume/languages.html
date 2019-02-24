@@ -1,13 +1,16 @@
 <section class="languages">
-    <header >
+    <header>
         <h2>
-            <span class="title">{% translate languages.title%}</span></h2>
+            <span class="title">{% translate languages.title%}</span>
+        </h2>
     </header>
+    {% for language in site.data.resume.languages %}
     <section>
-        <ul>
-            {% for language in site.data.resume.languages %}
-            <li>{{language.language}} - {{language.fluency}}</li>
-            {% endfor%}
-        </ul>
+        <header>
+            <span class="language__name">{{language.language}} </span>
+            <span class="language__fluency"> {{language.fluency}}</span>
+        </header>
     </section>
+    {% endfor%}
+
 </section>

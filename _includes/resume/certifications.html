@@ -2,22 +2,22 @@
 <section class="certifications">
     <header>
         <h2>
-            <svg class="icon icon-document-certificate">
-                <use xlink:href="#icon-document-certificate"></use>
-            </svg><span class="title">{% translate certifications.title%}</span>
+            <span class="title">{% translate certifications.title%}</span>
         </h2>
     </header>
-
-    {% for certification in site.data.resume.certifications %}
-    <section>
-        <header>
-            <h2 class="certification__name">{{certification.name}}</h2>
-            <h3>
-                <span class="certification__title">{{ certification.title }}</span>
+    <div class="resume-section__icon-container"><svg version="1.1" xmlns="http://www.w3.org2000/svg" width="20" height="20"
+            viewBox="0 0 512 512" class="resume-section__icon">
+            <use xlink:href="#icon-document-certificate"></use>
+        </svg></div>
+    <div class="resume-section__content-container">
+        {% for certification in site.data.resume.certifications %}
+        <section>
+            <header>
                 <span class="certification__date">{{certification.date | date: "%Y" }}</span>
-            </h3>
-        </header>
-    </section>
-    {% endfor %}
+                <span class="certification__name">{{certification.title}}</span>
+            </header>
+        </section>
+        {% endfor %}
+    </div>
 </section>
 {% endunless%}
