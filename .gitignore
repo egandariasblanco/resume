@@ -61,3 +61,7 @@ validate/log.json
 
 ### NPM ###
 package-lock.json
+
+### personal data ###
+_data/endika.json
+_data/mentxu.json

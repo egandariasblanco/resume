@@ -1,246 +1,193 @@
 {
-  "basics": {
-    "name": "Endika Gandarias Blanco",
-    "label": "Gestor de Vigilancia Tecnológica",
-    "image": "",
-    "email": "egandariasblanco@gmail.com",
-    "phone": "649683988",
-    "summary": "",
-    "location": {
-      "address": "Antonio Amat Maiz 22 6B",
-      "postalCode": "01006",
-      "city": "Vitoria-Gasteiz",
-      "countryCode": "ES",
-      "region": "Álava"
+    "basics": {
+        "name": "Richard Hendriks",
+        "label": "Programmer",
+        "image": "",
+        "email": "richard.hendriks@mail.com",
+        "phone": "(912) 555-4321",
+        "url": "http://richardhendricks.example.com",
+        "summary": "Richard hails from Tulsa. He has earned degrees from the University of Oklahoma and Stanford. (Go Sooners and Cardinal!) Before starting Pied Piper, he worked for Hooli as a part time software developer. While his work focuses on applied information theory, mostly optimizing lossless compression schema of both the length-limited and adaptive variants, his non-work interests range widely, everything from quantum computing to chaos theory. He could tell you about it, but THAT would NOT be a “length-limited” conversation!",
+        "location": {
+            "address": "2712 Broadway St",
+            "postalCode": "CA 94115",
+            "city": "San Francisco",
+            "countryCode": "US",
+            "region": "California"
+        },
+        "profiles": [{
+                "network": "Twitter",
+                "username": "neutralthoughts",
+                "url": ""
+            },
+            {
+                "network": "SoundCloud",
+                "username": "dandymusicnl",
+                "url": "https://soundcloud.example.com/dandymusicnl"
+            }
+        ]
     },
-    "profiles": [
-      {
-        "network": "LinkedIn",
-        "username": "egandariasblanco",
-        "url": "https://www.linkedin.com/in/egandariasblanco"
-      }
-    ]
-  },
-  "work": [
-    {
-      "name": "Ikusnet S.L.L.",
-      "location": "Vitoria-Gasteiz",
-      "description": "",
-      "position": "Becario Programador",
-      "url": "",
-      "startDate": "2005-04-01",
-      "endDate": "2005-06-01",
-      "summary": "Análisis y programación de una aplicación de tesorería en PHP.",
-      "highlights": []
-    },
-    {
-      "name": "Lantek SMS",
-      "location": "Vitoria-Gasteiz",
-      "description": "",
-      "position": "Técnico de Soporte",
-      "url": "",
-      "startDate": "2007-06-01",
-      "endDate": "2008-08-01",
-      "summary": "",
-      "highlights": [
-        "Instalación y configuración de software para automatizar la programación de CNC, in situ.",
-        "Resolución de incidencias"
-      ]
+    "work": [{
+        "name": "Pied Piper",
+        "location": "Palo Alto, CA",
+        "description": "Awesome compression company",
+        "position": "CEO/President",
+        "url": "http://piedpiper.example.com",
+        "startDate": "2013-12-01",
+        "endDate": "2014-12-01",
+        "summary": "Pied Piper is a multi-platform technology based on a proprietary universal compression algorithm that has consistently fielded high Weisman Scores™ that are not merely competitive, but approach the theoretical limit of lossless compression.",
+        "highlights": [
+            "Build an algorithm for artist to detect if their music was violating copy right infringement laws",
+            "Successfully won Techcrunch Disrupt",
+            "Optimized an algorithm that holds the current world record for Weisman Scores"
+        ]
     },
     {
-      "name": "Sopra Steria",
-      "location": "Vitoria-Gasteiz",
-      "description": "",
-      "position": "Técnico de Soporte Web",
-      "url": "",
-      "startDate": "2008-08-01",
-      "endDate": "2014-08-01",
-      "summary": "Realización de tareas de soporte web para EJIE S.A.",
-      "highlights": [
-        "Resolución de incidencias de usuario y de alarmas de sistema 24x7.",
-        "Investigación de problemas relacionados con incidencias repetitivas o bug de sistemas.",
-        "Automatización de tareas repetitivas.",
-        "Creación de utilidades mediante scripting para facilitar la administración de sistemas.",
-        "Participación en proyectos e instalaciones de productos en el cliente.",
-        "Consultoría y asesoramiento de soluciones técnicas.",
-        "Creación de herramienta de automatización de instalaciones de productos (Weblogic, Apache) y configuración de sistema para la solución de virtualización de sistemas TI mediante la utilización de Shell Script, Python y WLST.",
-        "Las tecnologías involucradas en todas estas tareas: Weblogic 5,8,9,10 y 11g, Apache 1.x y 2.x, WLST, Python y Shell Scripting, LDAP, Interwoven, Opendeploy, Oracle Service Bus, S.O. (Red Hat Linux, HP-UX), Hadoop, Oracle Enterprise Manager, Anthillpro."
-      ]
+        "name": "Pied Piper",
+        "location": "Palo Alto, CA",
+        "description": "Awesome compression company",
+        "position": "CEO/President",
+        "url": "http://piedpiper.example.com",
+        "startDate": "2013-12-01",
+        "endDate": "2014-12-01",
+        "summary": "Pied Piper is a multi-platform technology based on a proprietary universal compression algorithm that has consistently fielded high Weisman Scores™ that are not merely competitive, but approach the theoretical limit of lossless compression.",
+        "highlights": [
+            "Build an algorithm for artist to detect if their music was violating copy right infringement laws",
+            "Successfully won Techcrunch Disrupt",
+            "Optimized an algorithm that holds the current world record for Weisman Scores"
+        ]
     },
     {
-      "name": "Sopra Steria",
-      "location": "Vitoria-Gasteiz",
-      "description": "",
-      "position": "Técnico de Soporte BBDD",
-      "url": "",
-      "startDate": "2014-08-01",
-      "endDate": "2015-01-01",
-      "summary": "Realización de tareas de soporte BBDD para EJIE S.A.",
-      "highlights": [
-        "Las tecnologías involucradas en todas estas tareas: Oracle 8 y 10, MongoDB, HBase , MySQL.",
-        "Apoyo en la resolución de incidencias para soporte web."
-      ]
+        "name": "Pied Piper",
+        "location": "Palo Alto, CA",
+        "description": "Awesome compression company",
+        "position": "CEO/President",
+        "url": "http://piedpiper.example.com",
+        "startDate": "2013-12-01",
+        "endDate": "2014-12-01",
+        "summary": "Pied Piper is a multi-platform technology based on a proprietary universal compression algorithm that has consistently fielded high Weisman Scores™ that are not merely competitive, but approach the theoretical limit of lossless compression.",
+        "highlights": [
+            "Build an algorithm for artist to detect if their music was violating copy right infringement laws",
+            "Successfully won Techcrunch Disrupt",
+            "Optimized an algorithm that holds the current world record for Weisman Scores"
+        ]
+    }],
+    "volunteer": [{
+        "organization": "CoderDojo",
+        "position": "Teacher",
+        "url": "http://coderdojo.example.com/",
+        "startDate": "2012-01-01",
+        "endDate": "2013-01-01",
+        "summary": "Global movement of free coding clubs for young people.",
+        "highlights": [
+            "Awarded 'Teacher of the Month'"
+        ]
+    }],
+    "education": [{
+        "institution": "University of Oklahoma",
+        "area": "Information Technology",
+        "studyType": "Bachelor",
+        "startDate": "2011-06-01",
+        "endDate": "2014-01-01",
+        "gpa": "4.0",
+        "courses": [
+            "DB1101 - Basic SQL",
+            "CS2011 - Java Introduction"
+        ]
     },
     {
-      "name": "Sopra Steria",
-      "location": "Vitoria-Gasteiz",
-      "description": "",
-      "position": "Gestor de tareas",
-      "url": "",
-      "startDate": "2015-01-01",
-      "endDate": "2016-04-01",
-      "summary": "Gestión y planificación de tareas para varios grupos de soporte técnico en EJIE S.A.",
-      "highlights": [
-        "Uso de metodologías ágiles Kanban y Scrum",
-        "Gestión de recursos y planificación de realización de tareas de 5 grupos de soporte",
-        "Realización de informes mensuales con estadísticas de carga de trabajo",
-        "Consultoría y asesoramiento técnico"
-      ]
+        "institution": "University of Oklahoma",
+        "area": "Information Technology",
+        "studyType": "Bachelor",
+        "startDate": "2011-06-01",
+        "endDate": "2014-01-01",
+        "gpa": "4.0",
+        "courses": [
+            "DB1101 - Basic SQL",
+            "CS2011 - Java Introduction"
+        ]
     },
     {
-      "name": "GFI",
-      "location": "Vitoria-Gasteiz",
-      "description": "",
-      "position": "Gestor del proceso de Vigilancia Tecnológica",
-      "url": "",
-      "startDate": "2016-04-01",
-      "endDate": "",
-      "summary": "Responsable de la gestión del proceso de Vigilancia Tecnológica para EJIE S.A. Apoyo técnico en la realización de pruebas de concepto",
-      "highlights": [
-        "Realización de planificación anual del proceso y seguimiento del mismo para EJIE",
-        "Seguimiento y realización de informes de incidencias y mejoras realizadas con el equipo de proyectos de EJIE ",
-        "Redacción de noticias sobre tecnologías actuales (IoT, Cloud, Móvil y Social)",
-        "Búsqueda de tecnologías actuales que se puedan implantar en cliente",
-        "Realización de presentaciones y formaciones sobre nuevas tecnologías",
-        "Realización de pruebas de concepto:",
-        "JBoss 7",
-        "Solución HortonWorks de Big Data",
-        "OpenShift como orquestador de Dockers",
-        "Kaa como servidor para IoT",
-        "Análisis de microservicios",
-        "Ethereum como implementación de blockchain",
-        "ChatOps (Slack, Telegram, Teams, Hubot, Microsoft Bot Framework)",
-        "Uso de plataformas Cloud (Azure y AWS)",
-        "Integración contínua con Jenkins, Git y Nexus",
-        "Realización de aplicación móvil con plataforma OutSystems",
-        "Análisis de servicios cognitivos cloud.",
-        "DC/OS para dimensionamiento automático para tareas Jenkins"
-      ]
+        "institution": "University of Oklahoma",
+        "area": "Information Technology",
+        "studyType": "Bachelor",
+        "startDate": "2011-06-01",
+        "endDate": "2014-01-01",
+        "gpa": "4.0",
+        "courses": [
+            "DB1101 - Basic SQL",
+            "CS2011 - Java Introduction"
+        ]
+    }],
+    "awards": [{
+        "title": "Digital Compression Pioneer Award",
+        "date": "2014-11-01",
+        "awarder": "Techcrunch",
+        "summary": "There is no spoon."
+    }],
+    "publications": [{
+        "name": "Video compression for 3d media",
+        "publisher": "Hooli",
+        "releaseDate": "2014-10-01",
+        "url": "http://en.wikipedia.org/wiki/Silicon_Valley_(TV_series)",
+        "summary": "Innovative middle-out compression algorithm that changes the way we store data."
+    }],
+    "skills": [{
+            "name": "Web Development",
+            "level": "Master",
+            "keywords": [
+                "HTML",
+                "CSS",
+                "Javascript"
+            ]
+        },
+        {
+            "name": "Compression",
+            "level": "Master",
+            "keywords": [
+                "Mpeg",
+                "MP4",
+                "GIF"
+            ]
+        }
+    ],
+    "languages": [{
+        "language": "English",
+        "fluency": "Native speaker"
+    }],
+    "interests": [{
+        "name": "Wildlife",
+        "keywords": [
+            "Ferrets",
+            "Unicorns"
+        ]
+    }],
+    "references": [{
+        "name": "Erlich Bachman",
+        "reference": "It is my pleasure to recommend Richard, his performance working as a consultant for Main St. Company proved that he will be a valuable addition to any company."
+    }],
+    "projects": [{
+        "name": "Miss Direction",
+        "description": "A mapping engine that misguides you",
+        "highlights": [
+            "Won award at AIHacks 2016",
+            "Built by all women team of newbie programmers",
+            "Using modern technologies such as GoogleMaps, Chrome Extension and Javascript"
+        ],
+        "keywords": [
+            "GoogleMaps", "Chrome Extension", "Javascript"
+        ],
+        "startDate": "2016-08-24",
+        "endDate": "2016-08-24",
+        "url": "missdirection.example.com",
+        "roles": [
+            "Team lead", "Designer"
+        ],
+        "entity": "Smoogle",
+        "type": "application"
+    }],
+    "meta": {
+        "canonical": "https://raw.githubusercontent.com/jsonresume/resume-schema/master/resume.json",
+        "version": "v1.0.0",
+        "lastModified": "2017-12-24T15:53:00"
     }
-  ],
-  "volunteer": [
-    {
-      "organization": "",
-      "position": "",
-      "url": "",
-      "startDate": "",
-      "endDate": "",
-      "summary": "",
-      "highlights": [
-      ]
-    }
-  ],
-  "education": [
-    {
-      "institution": "Instituto Politécnico Diocesanas Arriaga",
-      "area": "Desarrollo de aplicaciones informáticas",
-      "studyType": "C.F.G.S.",
-      "startDate": "2000-09-01",
-      "endDate": "2002-06-01",
-      "gpa": "7.2",
-      "courses": [
-      ]
-    },
-    {
-      "institution": "Esc. Univ. De Ingeniería de Vitoria-Gasteiz UPV-EHU",
-      "area": "Ing. Técnico en Informática de Gestión",
-      "studyType": "Universitaria",
-      "startDate": "2002-09-01",
-      "endDate": "2005-06-01",
-      "gpa": "6.35",
-      "courses": [
-      ]
-    },
-    {
-      "institution": "Facultad de informática de San Sebastián UPV-EHU",
-      "area": "Ing. Informática",
-      "studyType": "Universitaria",
-      "startDate": "2005-09-01",
-      "endDate": "",
-      "gpa": "7.15",
-      "courses": [
-      ]
-    }
-  ],
-  "certifications" :[
-    {
-      "title": "Certified Scrum Master",
-      "date": "2015-12-01"
-    },
-    {
-      "title": "Oracle Weblogic Server 11g: System Administrator I",
-      "date": "2014-07-01"
-    },
-    {
-      "title": "ITIL Foundation V3",
-      "date": "2013-10-01"
-    }
-  ],
-  "awards": [
-    {
-      "title": "Business Game Álava",
-      "date": "2001-04-01",
-      "awarder": "Cámara de Comercio e Industria de Álava",
-      "summary": "Componente del equipo ganador del concurso de gestión de empresas."
-    }
-  ],
-  "publications": [
-    {
-      "name": "",
-      "publisher": "",
-      "releaseDate": "",
-      "url": "",
-      "summary": ""
-    }
-  ],
-  "skills": [
-    {
-      "name": "Téc. Sistemas Web",
-      "level": "",
-      "keywords": [
-        "Weblogic",
-        "Apache",
-        "Tomcat"
-      ]
-    }
-  ],
-  "languages": [
-    {
-      "language": "Inglés",
-      "fluency": "Nivel medio"
-    },
-    {
-      "language": "Euskera",
-      "fluency": "Nivel B1"
-    }
-  ],
-  "interests": [
-    {
-      "name": "",
-      "keywords": [
-      ]
-    }
-  ],
-  "references": [
-    {
-      "name": "",
-      "reference": ""
-    }
-  ],
- 
-  "meta": {
-    "canonical": "https://raw.githubusercontent.com/jsonresume/resume-schema/master/resume.json",
-    "version": "v1.0.0",
-    "lastModified": "2017-12-24T15:53:00"
-  }
 }
