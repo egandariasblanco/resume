@@ -1,23 +1,23 @@
 {% unless site.data.resume.certifications == null %}
 <section class="certifications">
-        <header >
-            <h2>
-                <svg class="icon icon-document-certificate">
-                    <use xlink:href="#icon-document-certificate"></use>
-                </svg><span class="title">{% translate certifications.title%}</span>
-            </h2>
+    <header>
+        <h2>
+            <svg class="icon icon-document-certificate">
+                <use xlink:href="#icon-document-certificate"></use>
+            </svg><span class="title">{% translate certifications.title%}</span>
+        </h2>
+    </header>
+
+    {% for certification in site.data.resume.certifications %}
+    <section>
+        <header>
+            <h2 class="certification__name">{{certification.name}}</h2>
+            <h3>
+                <span class="certification__title">{{ certification.title }}</span>
+                <span class="certification__date">{{certification.date | date: "%Y" }}</span>
+            </h3>
         </header>
-    
-        {% for certification in site.data.resume.certifications %}
-        <section>
-            <header>
-                <h2 class="certification__name">{{certification.name}}</h2>
-                <h3>
-                    <span class="certification__title">{{ certification.title }}</span> 
-                    <span class="certification__date">{{certification.date | date: "%Y" }}</span>
-                </h3>
-            </header>
-        </section>
-        {% endfor %}
     </section>
+    {% endfor %}
+</section>
 {% endunless%}

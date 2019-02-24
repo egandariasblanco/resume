@@ -11,7 +11,7 @@
     {% for project in site.data.resume.projects %}
     <section>
         <header>
-            <h2 class="project__name">{{project.name}}</h2>
+            <h3 class="project__name">{{project.name}}</h3>
             <h3>
                 <span class="project__entity">{{ project.entity }}</span> |
                 <span class="project__dates">{{project.startDate | date: "%Y" }} {% if experience.endDate == ""%} {% elsif project.endDate != "" %} - {{project.endDate | date: "%Y" }}{% endif%}</span>

@@ -11,7 +11,7 @@
   {% for experience in site.data.resume.work %}
   <section>
     <header>
-      <h2 class="work__position">{{ experience.position }}</h2>
+      <h3 class="work__position">{{ experience.position }}</h3>
       <h3>
         <span class="work__company">{{ experience.name }}</span> |
         <span class="work__dates">{{experience.startDate | date: "%Y" }}{% if experience.endDate == ""%} - {% translate experience.currently %} {% elsif experience.endDate != "" %} - {{experience.endDate | date: "%Y" }}{% endif%}</span>
