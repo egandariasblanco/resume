@@ -1,55 +1,44 @@
 // =========================================================================
 //
-//  PRECISE CONTROL OVER RESPONSIVE TYPOGRAPHY FOR SASS
+//  Fluid Typography
 //  ---------------------------------------------------
-//  Indrek Paas @indrekpaas
+//  Geoff Graham
 //
-//  Inspired by Mike Riethmuller's Precise control over responsive typography
-//  http://madebymike.com.au/writing/precise-control-responsive-typography/
-//
-//  Borrowed `strip-unit` function from Hugo Giraudel
-//  https://css-tricks.com/snippets/sass/strip-unit-function/
-//
-//  02.04.2018 Remove `screen` keyword from media queries
-//  11.08.2016 Remove redundant `&` self-reference
-//  31.03.2016 Remove redundant parenthesis from output
-//  02.10.2015 Add support for multiple properties
-//  24.04.2015 Initial release
+//  Borrowed from Geoff Graham - Css Tricks
+//  https://css-tricks.com/snippets/css/fluid-typography
 //
 // =========================================================================
 
-@mixin fluid-type($properties, $min-vw, $max-vw, $min-value, $max-value) {
-    @each $property in $properties {
-        #{$property}: $min-value;
-    }
+@function strip-unit($value) {
+    @return $value / ($value * 0 + 1);
+}
 
-    @media (min-width: $min-vw) {
-        @each $property in $properties {
-            #{$property}: calc(#{$min-value} + #{strip-unit($max-value - $min-value)} * (100vw - #{$min-vw}) / #{strip-unit($max-vw - $min-vw)});
-        }
-    }
+@mixin fluid-type($min-vw, $max-vw, $min-font-size, $max-font-size) {
+    $u1: unit($min-vw);
+    $u2: unit($max-vw);
+    $u3: unit($min-font-size);
+    $u4: unit($max-font-size);
 
-    @media (min-width: $max-vw) {
-        @each $property in $properties {
-            #{$property}: $max-value;
+    @if $u1==$u2 and $u1==$u3 and $u1==$u4 {
+        & {
+            font-size: $min-font-size;
+
+            @media screen and (min-width: $min-vw) {
+                font-size: calc(#{$min-font-size} + #{strip-unit($max-font-size - $min-font-size)} * ((100vw - #{$min-vw}) / #{strip-unit($max-vw - $min-vw)}));
+            }
+
+            @media screen and (min-width: $max-vw) {
+                font-size: $max-font-size;
+            }
         }
     }
 }
 
-@function strip-unit($number) {
-    @if type-of($number)=="number"and not unitless($number) {
-        @return $number / ($number * 0 + 1);
-    }
+$min_width: 320px;
+$max_width: 1200px;
+$min_font: 16px;
+$max_font: 24px;
 
-    @return $number;
-}
-
-/* Single property */
 html {
-    @include fluid-type(font-size, 320px, 1366px, 14px, 18px);
-}
-
-/* Multiple properties with same values */
-h1 {
-    @include fluid-type(padding-bottom padding-top, 20em, 70em, 2em, 4em);
+    @include fluid-type($min_width, $max_width, $min_font, $max_font);
 }

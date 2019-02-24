@@ -9,13 +9,14 @@ site:
 contact:
   title: Información de contacto
 education:
-  title: Formación académica
+  title: Educación
+  currently: Sin finalizar
 languages:
   title: Idiomas
 skills:
   title: Capacidades
 work:
-  title: Experiencia profesional
+  title: Experiencia 
 experience:
   currently: actualmente
 projects:

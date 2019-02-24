@@ -1,33 +1,33 @@
 <section class="work">
   <header>
-    <h2>
-      <svg class="icon icon-suitcase">
-        <use xlink:href="#icon-suitcase"></use>
-      </svg>
-      <span class="title">{% translate work.title%}</span>
+    <h2 class="script"> <span class="title">{% translate work.title%}</span>
     </h2>
   </header>
+  <div class="resume-section__icon-container"><svg version="1.1" xmlns="http://www.w3.org2000/svg" width="20" height="20"
+      viewBox="0 0 512 512" class="resume-section__icon">
+      <path d="m469.33 106.67h-106.67c0.65179-20.361 1.1605-44.691-18.826-56.705-19.188-11.84-42.492-5.8038-63.83-7.2956-32.186 0.51448-64.505-1.0698-96.601 0.86817-23.572 4.1024-37.001 28.617-34.078 51.129 2.4262 10.426-1.5668 14.432-11.997 12.002-34.405 0.52148-68.944-1.0796-103.26 0.8685-23.572 4.1027-37.001 28.617-34.077 51.129 0.14682 90.785-0.29383 181.58 0.22064 272.36 1.8094 25.48 27.76 41.693 51.777 38.31 140.56-0.14698 281.14 0.29403 421.69-0.22064 25.48-1.8094 41.693-27.76 38.31-51.777-0.14694-90.785 0.29407-181.58-0.22082-272.36-1.7813-21.206-21.152-38.722-42.447-38.309zm-298.67-21.334c-0.27371-19.659 20.804-22.945 35.995-21.333 39.203 0.2866 78.464-0.57522 117.63 0.43431 18.501 3.4331 17.573 23.714 17.04 38.227 0.60275 8.6024-14.113 1.886-19.994 4.0046h-150.67v-21.333zm320 341.33c0.27371 19.659-20.804 22.945-35.995 21.333h-412c-19.659 0.27371-22.945-20.804-21.333-35.995v-140.6c18.386 9.9979 39.993 4.5152 59.989 5.934h132.01c0.48809 12.031-1.0229 24.261 0.83759 36.154 7.4541 10.968 22.506 4.9608 33.823 6.5129 14.697-0.51192 29.602 1.0552 44.161-0.83759 10.968-7.4541 4.9608-22.506 6.5129-33.823-3.9335-11.934 8.8332-7.1684 15.995-8.0069 53.465-0.27064 106.98 0.54326 160.41-0.41039 15.212-7.9792 17.454-3.3053 15.592 11.805-6.7e-4 45.979 1e-3 91.961-1e-3 137.94zm-256-128v-42.667h42.667v42.667h-42.667zm256-64c0.27371 19.659-20.804 22.945-35.995 21.333h-156c2.7912-12.368-4.9562-24.677-18.665-21.334-20.027 0.535-40.268-1.086-60.156 0.83759-12.775 3.9247 1.132 26.142-15.844 20.496-55.202-0.28816-110.46 0.57726-165.63-0.43431-18.501-3.4331-17.573-23.714-17.04-38.227 0.28078-24.092-0.56756-48.242 0.43431-72.298 3.4331-18.501 23.714-17.573 38.227-17.04h409.34c19.659-0.27371 22.945 20.804 21.333 35.995v70.671z" />
+    </svg></div>
+  <div class="resume-section__content-container">
+    {% for experience in site.data.resume.work %}
+    <section>
+      <header>
+        <h3>
+          <span class="work__company">{{ experience.name }}</span>
+          <span class="work__dates">{{experience.startDate | date: "%Y" }}{% if experience.endDate == ""%} - {%
+            translate
+            experience.currently %} {% elsif experience.endDate != "" %} - {{experience.endDate | date: "%Y" }}{%
+            endif%}</span>
+        </h3>
+        <h3 class="work__position">{{ experience.position }}</h3>
+      </header>
 
-  {% for experience in site.data.resume.work %}
-  <section>
-    <header>
-      <h3 class="work__position">{{ experience.position }}</h3>
-      <h3>
-        <span class="work__company">{{ experience.name }}</span> |
-        <span class="work__dates">{{experience.startDate | date: "%Y" }}{% if experience.endDate == ""%} - {% translate experience.currently %} {% elsif experience.endDate != "" %} - {{experience.endDate | date: "%Y" }}{% endif%}</span>
-        {% unless experience.location == null %}
-        <div class="location"> <svg class="icon icon-location">
-            <use xlink:href="#icon-location"></use>
-          </svg> {{experience.location}} </div>{% endunless%}
-      </h3>
-    </header>
-
-    <p>{{experience.summary}}</p>
-    <ul>
-      {% for highlight in experience.highlights %}
-      <li>{{highlight}}</li>
-      {% endfor %}
-    </ul>
-  </section>
-  {% endfor %}
+      <p>{{experience.summary}}</p>
+      <ul>
+        {% for highlight in experience.highlights %}
+        <li>{{highlight}}</li>
+        {% endfor %}
+      </ul>
+    </section>
+    {% endfor %}
+  </div>
 </section>

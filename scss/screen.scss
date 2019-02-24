@@ -5,10 +5,17 @@
         box-sizing: border-box;
     }
 
+    body {
+        font-family: 'Nunito', sans-serif;
+    }
+
+    h3 {
+        font-family: 'IBM Plex Mono', monospace;
+    }
+
     .wrapper {
         display: grid;
         width: 100%;
-        grid-gap: 1rem;
 
         @include mq($until: tablet) {
             grid-template-columns: 1fr;
@@ -21,74 +28,155 @@
         }
 
         @include mq($from: tablet) {
-            grid-template-columns: repeat(3, 1fr);
+            grid-template-columns: 1fr 3fr;
             grid-template-areas:
-                "header  header  header"
-                "sidebar content content"
-                "footer  footer  footer";
+                "sidebar  content  content content"
         }
 
         @include mq($from: wide) {
-            grid-template-columns: repeat(4, 1fr);
+            grid-template-columns: 1fr 3fr;
             grid-template-areas:
-                "header header  header  header"
-                "sidebar content content content"
-                "footer  footer  footer footer";
+                "sidebar  content  content content"
         }
-    }
-
-    .header {
-        grid-area: header;
-        padding: 1.5rem 1.5rem 0 1.5rem;
-        background: #f6f6f6;
-    }
-
-    .footer {
-        grid-area: footer;
     }
 
     .content {
         grid-area: content;
         display: grid;
         grid-template-columns: 1fr;
-        padding: 1.5rem 3.5rem 0 1.5rem;
+
+        background-color: $content-background-color;
+
+        .script {
+            position: relative;
+            margin: 0;
+            z-index: 0;
+
+            span {
+                background-color: $content-background-color;
+                padding: 0 1em 0 0.5em;
+                text-transform: uppercase;
+
+            }
+
+            :before {
+                content: "";
+                display: block;
+                position: absolute;
+                z-index: -1;
+                top: 50%;
+                width: 100%;
+                border-bottom: 3px solid $sidebar-background-color;
+            }
+        }
+
+        >section {
+            display: grid;
+            width: 100%;
+            grid-template-columns: 3.5em 1fr;
+            grid-template-areas:
+                "header header"
+                "icon content";
+
+            header {
+                grid-area: header;
+                padding: 1em 0 1em 0;
+            }
+
+            .resume-section__icon-container {
+                grid-area: icon;
+                justify-self: end;
+                align-self: center;
+            }
+
+            .resume-section__icon {
+                display: inline-block;
+                width: 1em;
+                height: 1em;
+                stroke-width: 0;
+                stroke: currentColor;
+                fill: $sidebar-background-color;
+                background-color: $content-background-color;
+                border: 3px solid $sidebar-background-color;
+                border-radius: 24px;
+                padding: 0.5em;
+            }
+
+            .resume-section__content-container {
+                grid-area: content;
+            }
+
+            section {
+                margin-left: 1em;
+                padding-left: 2em;
+                border-left: 3px solid $sidebar-background-color;
+
+                *:last-child {
+                    margin: 0;
+                }
+            }
+
+            section:not(:last-of-type) {
+                *:last-child {
+                    margin-bottom: 0;
+                }
+            }
+
+            section:last-of-type {
+                *:last-child {
+                    margin-bottom: 1rem;
+                }
+            }
+
+            section:first-of-type:before {
+                content: "";
+                display: block;
+                position: relative;
+                top: 0%;
+                left: -2em;
+                width: 3%;
+                border-top: 3px solid $sidebar-background-color;
+            }
+
+            section:last-of-type:after {
+                content: "";
+                display: block;
+                position: relative;
+                top: 0%;
+                left: -2em;
+                width: 3%;
+                border-bottom: 3px solid $sidebar-background-color;
+            }
+
+        }
+
+        .work__company,
+        .education__type {
+            text-transform: uppercase;
+            color: teal;
+        }
+
+        .work__position {
+            text-transform: uppercase;
+            text-decoration: underline;
+        }
+
+        .work__dates,
+        .project__dates,
+        .education__dates {
+            display: inline-block;
+            background: teal;
+            padding: 0.5em;
+            float: right;
+            color: white
+        }
     }
 
     .sidebar {
         grid-area: sidebar;
-        display:grid;
-       
-        @include mq($until: tablet) {
-            border-top: 0.75rem solid #f6f6f6;
-            border-radius: 0.125rem;
-            padding: 1.5rem 3.5rem 0 1.5rem;
-            grid-template-rows: 1fr;
-        }
-
-        @include mq($from: tablet) {
-            border-right: 0.75rem solid #f6f6f6;
-            border-radius: 0.125rem;
-            padding: 1.5rem 2.5rem 0 3.5rem;
-            grid-template-rows: 3fr 1fr 1fr;
-        }
-
-        ul {
-            list-style-type: none;
-            padding: 0;
-            margin: 0;
-        }
+        background-color: $sidebar-background-color;
     }
 
-    body {
-        font-family: 'Cabin', sans-serif;
-        margin: 0;
-    }
-
-    h1,
-    h2,
-    h3 {
-        font-family: 'Raleway', sans-serif;
-    }
 
     .applicant {
         text-align: center;
@@ -112,13 +200,6 @@
     .work__position,
     .project__name {
         text-transform: uppercase;
-    }
-
-    .work__company,
-    .work__dates,
-    .project__company,
-    .project__dates {
-        font-style: italic;
     }
 
     .title {
