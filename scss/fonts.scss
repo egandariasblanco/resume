@@ -4,23 +4,16 @@ $font-prefix: '../assets/fonts';
     font-family: 'IBM Plex Mono';
     font-style: normal;
     font-weight: 400;
-    font-display: swap;
-    src: url('#{$font-prefix}/ibm_plex_mono/ibm-plex-mono-v4-latin-regular.eot');
-    src: local('IBM Plex Mono'),
-    local('IBMPlexMono'),
-    url('#{$font-prefix}/ibm_plex_mono/ibm-plex-mono-v4-latin-regular.eot?#iefix') format('embedded-opentype'),
-    url('#{$font-prefix}/ibm_plex_mono/ibm-plex-mono-v4-latin-regular.woff2') format('woff2'),
-    url('#{$font-prefix}/ibm_plex_mono/ibm-plex-mono-v4-latin-regular.woff') format('woff'),
-    url('#{$font-prefix}/ibm_plex_mono/ibm-plex-mono-v4-latin-regular.ttf') format('truetype'),
-    url('#{$font-prefix}/ibm_plex_mono/ibm-plex-mono-v4-latin-regular.svg#IBMPlex Mono') format('svg');
+    src: url('#{$font-prefix}/ibm-plex/ibm-plex-mono-v4-latin-regular.eot');
+    src: local('IBM Plex Mono'), local('IBMPlexMono'), url('#{$font-prefix}/ibm-plex/ibm-plex-mono-v4-latin-regular.eot?#iefix') format('embedded-opentype'), url('#{$font-prefix}/ibm-plex/ibm-plex-mono-v4-latin-regular.woff2') format('woff2'), url('#{$font-prefix}/ibm-plex/ibm-plex-mono-v4-latin-regular.woff') format('woff'), url('#{$font-prefix}/ibm-plex/ibm-plex-mono-v4-latin-regular.ttf') format('truetype'), url('#{$font-prefix}/ibm-plex/ibm-plex-mono-v4-latin-regular.svg#IBMPlex Mono') format('svg');
 }
 
 @font-face {
-    font-family: 'IBM Plex Sans';
+    font-family: 'IBM Plex Mono';
     font-style: normal;
     font-weight: 700;
-    src: url('#{$font-prefix}/ibm-plex-sans-v4-latin-700.eot');
-    src: local('IBM Plex Sans Bold'), local('IBMPlexSans-Bold'), url('#{$font-prefix}/ibm-plex-sans-v4-latin-700.eot?#iefix') format('embedded-opentype'), url('#{$font-prefix}/ibm-plex-sans-v4-latin-700.woff2') format('woff2'), url('#{$font-prefix}/ibm-plex-sans-v4-latin-700.woff') format('woff'), url('#{$font-prefix}/ibm-plex-sans-v4-latin-700.ttf') format('truetype'), url('#{$font-prefix}/ibm-plex-sans-v4-latin-700.svg#IBMPlex Sans') format('svg');
+    src: url('#{$font-prefix}/ibm-plex/ibm-plex-mono-v4-latin-700.eot');
+    src: local('IBM Plex Mono Bold'), local('IBMPlexMono-Bold'), url('#{$font-prefix}/ibm-plex/ibm-plex-mono-v4-latin-700.eot?#iefix') format('embedded-opentype'), url('#{$font-prefix}/ibm-plex/ibm-plex-mono-v4-latin-700.woff2') format('woff2'), url('#{$font-prefix}/ibm-plex/ibm-plex-mono-v4-latin-700.woff') format('woff'), url('#{$font-prefix}/ibm-plex/ibm-plex-mono-v4-latin-700.ttf') format('truetype'), url('#{$font-prefix}/ibm-plex/ibm-plex-mono-v4-latin-700.svg#IBMPlex Mono') format('svg');
 }
 
 @font-face {

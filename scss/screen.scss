@@ -7,6 +7,7 @@
 
     body {
         font-family: 'Nunito', sans-serif;
+        margin: 0;
     }
 
     .wrapper {
@@ -37,8 +38,8 @@
         grid-area: content;
         display: grid;
         grid-template-columns: 1fr;
-
         background-color: $content-background-color;
+        padding: 1.5rem;
 
         .summary {
             padding-left: 3.5em;
@@ -72,9 +73,15 @@
         }
 
         .work__company,
-        .education__type {
+        .education__type,
+            {
             text-transform: uppercase;
-            color: teal;
+            color: $color-2;
+        }
+
+        .education__institution {
+            text-transform: uppercase;
+            text-decoration: underline;
         }
 
         .work__position {
@@ -86,13 +93,28 @@
         .project__dates,
         .education__dates {
             display: inline-block;
-            background: teal;
+            background: $color-2;
             padding: 0.5em;
-            float: right;
             color: white;
             position: relative;
             transform: translateY(-25%);
+            font-weight: 400;
+            @include mq($from: tablet) {
+                float: right;
+            }
         }
+
+        .education__dates {
+            background: $color-5;
+        }
+    }
+
+    .resume-section__icon {
+        display: inline-block;
+        width: 2em;
+        height: 2em;
+        stroke-width: 0;
+
     }
 
     .content>section:not(.summary),
@@ -116,16 +138,9 @@
         }
 
         .resume-section__icon {
-            display: inline-block;
-            width: 1em;
-            height: 1em;
-            stroke-width: 0;
-            stroke: currentColor;
-            fill: $sidebar-background-color;
             background-color: $content-background-color;
-            border: 3px solid $sidebar-background-color;
-            border-radius: 24px;
-            padding: 0.5em;
+            stroke: $sidebar-background-color;
+            fill: $sidebar-background-color;
         }
 
         .resume-section__content-container {
@@ -176,44 +191,71 @@
     }
 
     .certifications {
+        margin-bottom: 1.5rem;
         section {
-            border-left: 3px solid $sidebar-primary-color;
+            border-left: 3px solid $color-4;
         }
 
         section:first-of-type:before {
             width: 10%;
-            border-top: 3px solid $sidebar-primary-color;
+            border-top: 3px solid $color-4;
         }
 
         section:last-of-type:after {
             width: 10%;
-            border-bottom: 3px solid $sidebar-primary-color;
+            border-bottom: 3px solid $color-4;
         }
 
         header:first-of-type h2 {
             text-align: center;
-            margin: 0.5em;
-            border: 1px solid $sidebar-primary-color;
+            border: 3px solid $color-1;
             padding: 0.5em;
+            color: $color-2;
         }
+
+        .certification__date {
+            color: $color-2;
+            font-weight: bold;
+        }
+
+        
+        
+        
+
     }
 
     .languages {
+        header{
+            padding: 1em 0 1em 0;
+        }
         header:first-of-type h2 {
             text-align: center;
-            margin: 0.5em;
-            border: 1px solid $sidebar-primary-color;
+            border: 3px solid $color-1;
             padding: 0.5em;
+            color: $color-2;
+        }
+
+        .language__name {
+            text-transform: uppercase;
+            font-weight: 700;
         }
     }
+
 
     .sidebar {
         grid-area: sidebar;
         background-color: $sidebar-background-color;
-        color: $sidebar-primary-color;
+        color: $color-4;
+        padding:0.5rem;
 
         ul {
             list-style-type: none;
+        }
+
+        .resume-section__icon {
+            background-color: $sidebar-background-color;
+            stroke: $content-background-color;
+            fill: $content-background-color;
         }
     }
 
@@ -221,6 +263,44 @@
     .project__name {
         text-transform: uppercase;
     }
+
+    .applicant__name {
+        color: $color-1;
+        text-transform: uppercase;
+    }
+
+    .applicant__label {
+        color: $color-4;
+        text-transform: uppercase;
+        font-weight: 400;
+    }
+
+    .contact {
+        text-align: center;
+
+        ul {
+            padding: 0;
+            li{
+                padding: 1em;
+            }
+        }
+
+
+    }
+
+    .contact__phone,
+    .contact__mail,
+    .contact__location {
+        color: $color-1;
+
+        .resume-section__icon {
+            display: block;
+            margin: 1em auto;
+            stroke: $color-5;
+            fill: $color-5;
+        }
+    }
+
 
     .title {
         text-transform: uppercase;

@@ -6,10 +6,11 @@
     </header>
     {% for language in site.data.resume.languages %}
     <section>
-        <header>
-            <span class="language__name">{{language.language}} </span>
-            <span class="language__fluency"> {{language.fluency}}</span>
-        </header>
+
+        <ul>
+            <li> <span class="language__name">{{language.language}} </span>
+                <span class="language__fluency"> {{language.fluency}}</span></li>
+
     </section>
     {% endfor%}
 

@@ -1,8 +1,11 @@
-$content-background-color : #f2f2f2;
-$sidebar-background-color : #4D4D4D;
+$color-1:#a9c1c1;
+$color-2:#8fc4bb;
+$color-3: #4D4D4d;
+$color-4: #f2f2f2;
+$color-5 : #afabab;
 
-$sidebar-primary-color : #A9C1C1;
-$sidebar-secondary-color : $content-background-color;
+$content-background-color : white;
+$sidebar-background-color : $color-3;
 
-$content-primary-color :  $sidebar-background-color ;
-$content-secondary-color : #8FC4BA;
+$content-primary-color:  $sidebar-background-color ;
+$content-secondary-color: $color-2;

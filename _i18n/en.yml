@@ -11,6 +11,7 @@ contact:
 education:
   title: Education
   currently: Not finished
+  gpa: GPA
 languages:
   title: Languages
 skills:

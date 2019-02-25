@@ -37,8 +37,20 @@
 $min_width: 320px;
 $max_width: 1200px;
 $min_font: 16px;
-$max_font: 24px;
+$max_font: 20px;
 
 html {
     @include fluid-type($min_width, $max_width, $min_font, $max_font);
+}
+
+h1 {
+    @include fluid-type($min_width, $max_width, 2    *$min_font, 2    *$max_font);
+}
+
+h2 {
+    @include fluid-type($min_width, $max_width,  1.5  *$min_font,  1.5  *$max_font);
+}
+
+h3 {
+    @include fluid-type($min_width, $max_width,  1.17 *$min_font,  1.17 *$max_font);
 }
