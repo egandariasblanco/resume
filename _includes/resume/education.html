@@ -1,25 +1,25 @@
-<section class="education">
+<section class="education c-resume-section">
     <header>
-        <h2 class="script"> <span class="title">{% translate education.title%}</span>
+        <h2 class="c-resume-section__script-title"> <span>{% translate education.title%}</span>
         </h2>
     </header>
-    <div class="resume-section__icon-container"><svg class="resume-section__icon">
+    <div class="c-resume-section__icon-container"><svg class="c-icon">
             <use xlink:href="#icon-book"></use>
         </svg></div>
-    <div class="resume-section__content-container">
+    <div class="c-resume-section__content-container">
         {% for resumeEducation in site.data.resume.education %}
-        <section>
+        <section class="c-resume-item">
             <header>
-                <h3>
-                    <span class="education__type">{{resumeEducation.studyType}}</span>
-                    <span class="education__dates">{{resumeEducation.startDate | date: "%Y" }}{% if resumeEducation.endDate == ""%}
-                        - {%
-                        translate
-                        education.currently %} {% elsif resumeEducation.endDate != "" %} - {{resumeEducation.endDate | date: "%Y"
-                        }}{%
-                        endif%}</span>
+                <h3 class="c-resume-item__title">
+                    <span class="education__type">{{resumeEducation.studyType}}</span>                    
                 </h3>
-                <h3 class="education__institution"> {{ resumeEducation.institution }}</h3>
+                <h3 class="c-resume-item__subtitle"> {{ resumeEducation.institution }}</h3>
+                <span class="c-resume-item__dates--grey">{{resumeEducation.startDate | date: "%Y" }}{% if resumeEducation.endDate == ""%}
+                    - {%
+                    translate
+                    education.currently %} {% elsif resumeEducation.endDate != "" %} - {{resumeEducation.endDate | date: "%Y"
+                    }}{%
+                    endif%}</span>
                 <span class="education__gpa">{% translate education.gpa %} {{resumeEducation.gpa}}</span>
             </header>
         </section>

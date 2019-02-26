@@ -1,17 +1,15 @@
-<section class="languages">
+<section class="languages c-resume-section">
     <header>
-        <h2>
-            <span class="title">{% translate languages.title%}</span>
+        <h2 class="c-resume-section__box-title">
+            <span>{% translate languages.title%}</span>
         </h2>
     </header>
-    {% for language in site.data.resume.languages %}
-    <section>
+    <ul>
+        {% for language in site.data.resume.languages %}
 
-        <ul>
-            <li> <span class="language__name">{{language.language}} </span>
-                <span class="language__fluency"> {{language.fluency}}</span></li>
+        <li> <span class="language__name">{{language.language}} </span>
+            <span class="language__fluency"> {{language.fluency}}</span></li>
 
-    </section>
-    {% endfor%}
-
+        {% endfor%}
+    </ul>
 </section>

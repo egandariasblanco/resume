@@ -1,20 +1,20 @@
 {% unless site.data.resume.certifications == null %}
-<section class="certifications">
+<section class="certifications c-resume-section">
     <header>
-        <h2>
-            <span class="title">{% translate certifications.title%}</span>
+        <h2 class="c-resume-section__box-title">
+            <span>{% translate certifications.title%}</span>
         </h2>
     </header>
-    <div class="resume-section__icon-container">
-        <svg class="resume-section__icon">
+    <div class="c-resume-section__icon-container">
+        <svg class="c-icon">
             <use xlink:href="#icon-clipboard"></use>
         </svg></div>
-    <div class="resume-section__content-container">
+    <div class="c-resume-section__content-container">
         {% for certification in site.data.resume.certifications %}
-        <section>
-            <header>
-                <p class="certification__date">{{certification.date | date: "%Y" }}</p>
-                <span class="certification__name">{{certification.title}}</span>
+        <section class="c-resume-item c-certifications-item">
+            <header class="c-resume-item__title">
+                <p class="c-certification__date">{{certification.date | date: "%Y" }}</p>
+                <span class="c-certification__name">{{certification.title}}</span>
             </header>
         </section>
         {% endfor %}

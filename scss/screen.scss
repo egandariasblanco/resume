@@ -1,5 +1,22 @@
 @charset "utf-8";
 
+/* Using namespaces : 
+    https://csswizardry.com/2015/03/more-transparent-ui-code-with-namespaces/
+    https://www.smashingmagazine.com/2016/06/battling-bem-extended-edition-common-problems-and-how-to-avoid-them/
+
+    o - object 
+        Signify that something is an Object, and that it may be used in any number of unrelated contexts to the one you can currently see it in
+    c - component
+        Signify that something is a Component. This is a concrete, implementation-specific piece of UI.
+    u - utility
+        Signify that this class is a Utility class. It has a very specific role (often providing only one declaration) and should not be bound onto or changed
+    is-, has-: 
+        Signify that the piece of UI in question is currently styled a certain way because of a state or condition. 
+
+    and BEM
+
+*/
+
 @media screen {
     * {
         box-sizing: border-box;
@@ -10,7 +27,7 @@
         margin: 0;
     }
 
-    .wrapper {
+    .o-grid-layout {
         display: grid;
         width: 100%;
 
@@ -24,7 +41,7 @@
         @include mq($from: tablet) {
             grid-template-columns: 1fr 2fr;
             grid-template-areas:
-                "sidebar content  content content"
+                "sidebar content content content"
         }
 
         @include mq($from: wide) {
@@ -34,31 +51,36 @@
         }
     }
 
-    .content {
+    .o-content-grid-area {
         grid-area: content;
         display: grid;
         grid-template-columns: 1fr;
         background-color: $whitish;
         padding: 1.5rem;
+    }
 
-        .summary {
-            padding-left: 3.5em;
+    .c-resume-section {
+        display: grid;
+        width: 100%;
+        grid-template-columns: 3.5em 1fr;
+        grid-template-areas:
+            "header header"
+            "icon content";
+
+        header {
+            grid-area: header;
+            padding: 1em 0 1em 0;
         }
 
-        h3 {
-            font-family: 'IBM Plex Mono', monospace;
-        }
-
-        .script {
+        &__script-title {
             position: relative;
             margin: 0;
             z-index: 0;
+            text-transform: uppercase;
 
             span {
                 background-color: $whitish;
                 padding: 0 1em 0 0.5em;
-                text-transform: uppercase;
-
             }
 
             :before {
@@ -72,250 +94,194 @@
             }
         }
 
-        .work__company,
-        .education__type,
-            {
-            text-transform: uppercase;
-            color: $color-2;
-        }
-
-        .education__institution {
-            text-transform: uppercase;
-            text-decoration: underline;
-        }
-
-        .work__position {
-            text-transform: uppercase;
-            text-decoration: underline;
-        }
-
-        .work__dates,
-        .project__dates,
-        .education__dates {
-            display: inline-block;
-            background: $color-2;
+        &__box-title {
+            text-align: center;
+            border: 3px solid $color-1;
             padding: 0.5em;
-            color: white;
-            position: relative;
-            transform: translateY(-25%);
-            font-weight: 400;
-            @include mq($from: tablet) {
-                float: right;
-            }
+            color: $color-2;
+            text-transform: uppercase;
         }
 
-        .education__dates {
-            background: $color-5;
-        }
-    }
-
-    .resume-section__icon {
-        display: inline-block;
-        width: 2em;
-        height: 2em;
-        stroke-width: 0;
-
-    }
-
-    .content>section:not(.summary),
-    .certifications {
-        display: grid;
-        width: 100%;
-        grid-template-columns: 3.5em 1fr;
-        grid-template-areas:
-            "header header"
-            "icon content";
-
-        header {
-            grid-area: header;
-            padding: 1em 0 1em 0;
-        }
-
-        .resume-section__icon-container {
+        &__icon-container {
             grid-area: icon;
             justify-self: end;
             align-self: center;
         }
 
-        .resume-section__icon {
-            background-color: $whitish;
-            stroke: $dark-brownish;
-            fill: $dark-brownish;
-        }
-
-        .resume-section__content-container {
+        &__content-container {
             grid-area: content;
         }
+    }
 
-        section {
-            margin-left: 1em;
-            padding-left: 2em;
-            border-left: 3px solid $dark-brownish;
+    .c-icon {
+        background-color: $whitish;
+        stroke: $dark-brownish;
+        fill: $dark-brownish;
+        display: inline-block;
+        width: 2em;
+        height: 2em;
+        stroke-width: 0;
+    }
 
-            *:last-child {
-                margin: 0;
-            }
-        }
+    .c-resume-item {
+        margin-left: 1em;
+        padding-left: 2em;
+        border-width: 0 0 0 3px;
+        border-style: solid;
+        border-color: $dark-brownish;
 
-        section:not(:last-of-type) {
+        &:not(:last-of-type) {
             *:last-child {
                 margin-bottom: 0;
             }
         }
 
-        section:last-of-type {
+        &:last-of-type {
             *:last-child {
                 margin-bottom: 1rem;
             }
         }
 
-        section:first-of-type:before {
+        &:first-of-type:before {
             content: "";
             display: block;
             position: relative;
             top: 0%;
             left: -2em;
             width: 3%;
-            border-top: 3px solid $dark-brownish;
+            border-width: 3px 0 0 0;
+            border-style: solid;
+            border-color: $dark-brownish;
         }
 
-        section:last-of-type:after {
+        &:last-of-type:after {
             content: "";
             display: block;
             position: relative;
             top: 0%;
             left: -2em;
             width: 3%;
-            border-bottom: 3px solid $dark-brownish;
-        }
-    }
-
-    .certifications {
-        margin-bottom: 1.5rem;
-        section {
-            border-left: 3px solid $color-4;
+            border-width: 0 0 3px 0;
+            border-style: solid;
+            border-color: $dark-brownish;
         }
 
-        section:first-of-type:before {
-            width: 10%;
-            border-top: 3px solid $color-4;
-        }
-
-        section:last-of-type:after {
-            width: 10%;
-            border-bottom: 3px solid $color-4;
-        }
-
-        header:first-of-type h2 {
-            text-align: center;
-            border: 3px solid $color-1;
-            padding: 0.5em;
-            color: $color-2;
-        }
-
-        .certification__date {
-            color: $color-2;
-            font-weight: bold;
-        }
-
-        
-        
-        
-
-    }
-
-    .languages {
-        header{
-            padding: 1em 0 1em 0;
-        }
-        header:first-of-type h2 {
-            text-align: center;
-            border: 3px solid $color-1;
-            padding: 0.5em;
-            color: $color-2;
-        }
-
-        .language__name {
+        &__title {
+            font-family: 'IBM Plex Mono', monospace;
             text-transform: uppercase;
-            font-weight: 700;
+            color: $tealish;
+
+        }
+
+        &__subtitle {
+            font-family: 'IBM Plex Mono', monospace;
+            text-decoration: underline;
+            text-transform: uppercase;
+        }
+
+        &__dates {
+            background: $tealish;
+            padding: 0.5em;
+            color: $whitish;
+        }
+
+        &__dates--grey {
+            background: $greyish;
+            padding: 0.5em;
+            color: $whitish;
         }
     }
 
+    .c-summary {
+        padding-left: 3.5em;
+    }
 
-    .sidebar {
+    .c-certification__date {
+        color: $tealish;
+        font-weight: bold;
+    }
+
+    .c-certification__name {
+        color: $color-4;
+    }
+
+    .c-certifications__item {
+        border-color: $whitish;
+    }
+
+    .languages{
+        grid-template-columns: 1fr;
+        grid-template-areas: "header" "content"
+    }
+    .language__name {
+        text-transform: uppercase;
+        font-weight: 700;
+        color: $whitish;
+    }
+
+    .language__fluency {
+        color: $whitish;
+    }
+
+    .o-sidebar {
         grid-area: sidebar;
         background-color: $dark-brownish;
-        color: $color-4;
-        padding:0.5rem;
+        padding: 0.5rem;
 
         ul {
             list-style-type: none;
         }
 
-        .resume-section__icon {
+        .c-icon {
             background-color: $dark-brownish;
             stroke: $whitish;
             fill: $whitish;
         }
-    }
 
-    .work__position,
-    .project__name {
-        text-transform: uppercase;
+        .c-resume-item {
+            border-color: $whitish;
+            &:first-of-type:before {
+                border-color: $whitish;
+            }
+
+            &:last-of-type:after {
+                border-color: $whitish;
+            }
+        }
     }
 
     .applicant__name {
-        color: $color-1;
+        color: $blueish;
         text-transform: uppercase;
     }
 
     .applicant__label {
-        color: $color-4;
+        color: $whitish;
         text-transform: uppercase;
         font-weight: 400;
     }
 
     .contact {
         text-align: center;
-
         ul {
             padding: 0;
-            li{
+            li {
                 padding: 1em;
             }
         }
-
-
     }
 
     .contact__phone,
     .contact__mail,
     .contact__location {
-        color: $color-1;
+        color: $blueish;
 
-        .resume-section__icon {
+        .c-icon {
             display: block;
             margin: 1em auto;
-            stroke: $color-5;
-            fill: $color-5;
+            stroke: $greyish;
+            fill: $greyish;
         }
-    }
-
-
-    .title {
-        text-transform: uppercase;
-    }
-
-    .location {
-        @include mq($from: mobile) {
-            float: right;
-        }
-    }
-
-    .disclaimer {
-        text-transform: uppercase;
-        padding: 1rem;
-        background: #f6f6f6;
     }
 
 }

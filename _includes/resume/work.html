@@ -1,25 +1,26 @@
-<section class="work">
+<section class="work c-resume-section">
   <header>
-    <h2 class="script"> <span class="title">{% translate work.title%}</span>
+    <h2 class="c-resume-section__script-title"> <span>{% translate work.title%}</span>
     </h2>
   </header>
-  <div class="resume-section__icon-container">
-    <svg class="resume-section__icon">
+  <div class="c-resume-section__icon-container">
+    <svg class="c-icon">
       <use xlink:href="#icon-briefcase"></use>
     </svg></div>
-  <div class="resume-section__content-container">
+  <div class="c-resume-section__content-container">
     {% for experience in site.data.resume.work %}
-    <section>
+    <section class="c-resume-item">
       <header>
-        <h3>
-          <span class="work__company">{{ experience.name }}</span>
-          <span class="work__dates">{{experience.startDate | date: "%Y" }}{% if experience.endDate == ""%} - {%
-            translate
-            experience.currently %} {% elsif experience.endDate != "" %} - {{experience.endDate | date: "%Y" }}{%
-            endif%}</span>
+        <h3 class="c-resume-item__title">
+          <span>{{ experience.name }}</span>
         </h3>
-        <h3 class="work__position">{{ experience.position }}</h3>
+        <h3 class="c-resume-item__subtitle">{{ experience.position }}</h3>
       </header>
+
+      <span class="c-resume-item__dates">{{experience.startDate | date: "%Y" }}{% if experience.endDate == ""%} - {%
+        translate
+        experience.currently %} {% elsif experience.endDate != "" %} - {{experience.endDate | date: "%Y" }}{%
+        endif%}</span>
 
       <p>{{experience.summary}}</p>
       <ul>
