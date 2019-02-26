@@ -38,7 +38,7 @@
         grid-area: content;
         display: grid;
         grid-template-columns: 1fr;
-        background-color: $content-background-color;
+        background-color: $whitish;
         padding: 1.5rem;
 
         .summary {
@@ -55,7 +55,7 @@
             z-index: 0;
 
             span {
-                background-color: $content-background-color;
+                background-color: $whitish;
                 padding: 0 1em 0 0.5em;
                 text-transform: uppercase;
 
@@ -68,7 +68,7 @@
                 z-index: -1;
                 top: 50%;
                 width: 100%;
-                border-bottom: 3px solid $sidebar-background-color;
+                border-bottom: 3px solid $dark-brownish;
             }
         }
 
@@ -138,9 +138,9 @@
         }
 
         .resume-section__icon {
-            background-color: $content-background-color;
-            stroke: $sidebar-background-color;
-            fill: $sidebar-background-color;
+            background-color: $whitish;
+            stroke: $dark-brownish;
+            fill: $dark-brownish;
         }
 
         .resume-section__content-container {
@@ -150,7 +150,7 @@
         section {
             margin-left: 1em;
             padding-left: 2em;
-            border-left: 3px solid $sidebar-background-color;
+            border-left: 3px solid $dark-brownish;
 
             *:last-child {
                 margin: 0;
@@ -176,7 +176,7 @@
             top: 0%;
             left: -2em;
             width: 3%;
-            border-top: 3px solid $sidebar-background-color;
+            border-top: 3px solid $dark-brownish;
         }
 
         section:last-of-type:after {
@@ -186,7 +186,7 @@
             top: 0%;
             left: -2em;
             width: 3%;
-            border-bottom: 3px solid $sidebar-background-color;
+            border-bottom: 3px solid $dark-brownish;
         }
     }
 
@@ -244,7 +244,7 @@
 
     .sidebar {
         grid-area: sidebar;
-        background-color: $sidebar-background-color;
+        background-color: $dark-brownish;
         color: $color-4;
         padding:0.5rem;
 
@@ -253,9 +253,9 @@
         }
 
         .resume-section__icon {
-            background-color: $sidebar-background-color;
-            stroke: $content-background-color;
-            fill: $content-background-color;
+            background-color: $dark-brownish;
+            stroke: $whitish;
+            fill: $whitish;
         }
     }
 
