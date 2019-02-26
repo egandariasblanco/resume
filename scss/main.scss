@@ -1,9 +1,9 @@
 @charset "utf-8";
 
 // Import partials from `sass_dir` (defaults to `_sass`)
-@import "_normalize";
-@import "fonts";
-@import "fluid-type";
-@import "mixins/_mq";
-@import "colors";
-@import "screen";
+@import "_normalize";   // normalize scss port : https://github.com/JohnAlbin/normalize-scss
+@import "fonts";        // font-face collection
+@import "fluid-type";   // fluid-type support : https://css-tricks.com/snippets/css/fluid-typography/
+@import "mixins/_mq";   // media queries mixin : https://github.com/sass-mq/sass-mq
+@import "colors";       // color scheme
+@import "screen";       // styles 
