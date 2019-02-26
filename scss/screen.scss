@@ -57,6 +57,7 @@
         grid-template-columns: 1fr;
         background-color: $whitish;
         padding: 1.5rem;
+        color: $dark-brownish;
     }
 
     .c-resume-section {
@@ -182,6 +183,7 @@
         &__dates {
             background: $tealish;
             padding: 0.5em;
+            font-weight: 700;
             color: $whitish;
         }
 

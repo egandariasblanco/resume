@@ -17,7 +17,7 @@
                 <span class="c-resume-item__dates--grey">{{resumeEducation.startDate | date: "%Y" }}{% if resumeEducation.endDate == ""%}
                     - {%
                     translate
-                    education.currently %} {% elsif resumeEducation.endDate != "" %} - {{resumeEducation.endDate | date: "%Y"
+                    education.currently %}{% elsif resumeEducation.endDate != "" %} - {{resumeEducation.endDate | date: "%Y"
                     }}{%
                     endif%}</span>
                 <span class="education__gpa">{% translate education.gpa %} {{resumeEducation.gpa}}</span>
