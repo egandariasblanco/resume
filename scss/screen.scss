@@ -47,7 +47,7 @@
         @include mq($from: wide) {
             grid-template-columns: 1fr 3fr;
             grid-template-areas:
-                "sidebar  content  content content"
+                "sidebar  content content content"
         }
     }
 
@@ -63,14 +63,14 @@
     .c-resume-section {
         display: grid;
         width: 100%;
-        grid-template-columns: 3.5em 1fr;
+        grid-template-columns: 3.5rem 1fr;
         grid-template-areas:
             "header header"
             "icon content";
 
         header {
             grid-area: header;
-            padding: 1em 0 1em 0;
+            padding: 1rem 0 1rem 0;
         }
 
         &__script-title {
@@ -81,7 +81,7 @@
 
             span {
                 background-color: $whitish;
-                padding: 0 1em 0 0.5em;
+                padding: 0 1rem 0 0.5rem;
             }
 
             :before {
@@ -98,7 +98,7 @@
         &__box-title {
             text-align: center;
             border: 3px solid $color-1;
-            padding: 0.5em;
+            padding: 0.5rem;
             color: $color-2;
             text-transform: uppercase;
         }
@@ -119,14 +119,14 @@
         stroke: $dark-brownish;
         fill: $dark-brownish;
         display: inline-block;
-        width: 2em;
-        height: 2em;
+        width: 2rem;
+        height: 2rem;
         stroke-width: 0;
     }
 
     .c-resume-item {
-        margin-left: 1em;
-        padding-left: 2em;
+        margin-left: 1rem;
+        padding-left: 2rem;
         border-width: 0 0 0 3px;
         border-style: solid;
         border-color: $dark-brownish;
@@ -148,7 +148,7 @@
             display: block;
             position: relative;
             top: 0%;
-            left: -2em;
+            left: -2rem;
             width: 3%;
             border-width: 3px 0 0 0;
             border-style: solid;
@@ -160,7 +160,7 @@
             display: block;
             position: relative;
             top: 0%;
-            left: -2em;
+            left: -2rem;
             width: 3%;
             border-width: 0 0 3px 0;
             border-style: solid;
@@ -171,7 +171,6 @@
             font-family: 'IBM Plex Mono', monospace;
             text-transform: uppercase;
             color: $tealish;
-
         }
 
         &__subtitle {
@@ -182,20 +181,20 @@
 
         &__dates {
             background: $tealish;
-            padding: 0.5em;
+            padding: 0.5rem;
             font-weight: 700;
             color: $whitish;
         }
 
         &__dates--grey {
             background: $greyish;
-            padding: 0.5em;
+            padding: 0.5rem;
             color: $whitish;
         }
     }
 
     .c-summary {
-        padding-left: 3.5em;
+        padding-left: 3.5rem;
     }
 
     .c-certification__date {
@@ -211,10 +210,11 @@
         border-color: $whitish;
     }
 
-    .languages{
+    .languages {
         grid-template-columns: 1fr;
-        grid-template-areas: "header" "content"
+        grid-template-areas: "header""content"
     }
+
     .language__name {
         text-transform: uppercase;
         font-weight: 700;
@@ -242,6 +242,7 @@
 
         .c-resume-item {
             border-color: $whitish;
+
             &:first-of-type:before {
                 border-color: $whitish;
             }
@@ -251,6 +252,8 @@
             }
         }
     }
+
+
 
     .applicant__name {
         color: $blueish;
@@ -265,8 +268,10 @@
 
     .contact {
         text-align: center;
+
         ul {
             padding: 0;
+
             li {
                 padding: 1em;
             }
@@ -280,7 +285,7 @@
 
         .c-icon {
             display: block;
-            margin: 1em auto;
+            margin: 1rem auto;
             stroke: $greyish;
             fill: $greyish;
         }

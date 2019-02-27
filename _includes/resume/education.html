@@ -20,7 +20,7 @@
                     education.currently %}{% elsif resumeEducation.endDate != "" %} - {{resumeEducation.endDate | date: "%Y"
                     }}{%
                     endif%}</span>
-                <span class="education__gpa">{% translate education.gpa %} {{resumeEducation.gpa}}</span>
+                <p class="education__gpa">{% translate education.gpa %} {{resumeEducation.gpa}}</p>
             </header>
         </section>
         {% endfor %}
