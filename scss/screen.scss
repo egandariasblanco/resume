@@ -97,9 +97,9 @@
 
         &__box-title {
             text-align: center;
-            border: 3px solid $color-1;
+            border: 3px solid $blueish;
             padding: 0.5rem;
-            color: $color-2;
+            color: $tealish;
             text-transform: uppercase;
         }
 
@@ -203,7 +203,7 @@
     }
 
     .c-certification__name {
-        color: $color-4;
+        color: $whitish;
     }
 
     .c-certifications__item {
@@ -225,8 +225,11 @@
         color: $whitish;
     }
 
-    .o-sidebar {
+    .o-sidebar-grid-area{
         grid-area: sidebar;
+    }
+    
+    .o-sidebar {
         background-color: $dark-brownish;
         padding: 0.5rem;
 
