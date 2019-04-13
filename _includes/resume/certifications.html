@@ -1,5 +1,5 @@
 {% unless site.data.resume.certifications == null %}
-<section class="certifications c-resume-section">
+<section class="certifications c-resume-section l-sidebar">
     <header>
         <h2 class="c-resume-section__box-title">
             <span>{% translate certifications.title%}</span>
@@ -13,8 +13,8 @@
         {% for certification in site.data.resume.certifications %}
         <section class="c-resume-item c-certifications-item">
             <header class="c-resume-item__title">
-                <p class="c-certification__date">{{certification.date | date: "%Y" }}</p>
-                <span class="c-certification__name">{{certification.title}}</span>
+                <p class="c-certifications-item__date">{{certification.date | date: "%Y" }}</p>
+                <span class="c-certifications-item__name">{{certification.title}}</span>
             </header>
         </section>
         {% endfor %}

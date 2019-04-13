@@ -27,37 +27,73 @@
         margin: 0;
     }
 
-    .o-grid-layout {
+    .l-grid {
         display: grid;
         width: 100%;
-
+        background-color: $dark-brownish;
+        
         @include mq($until: tablet) {
             grid-template-columns: 1fr;
             grid-template-areas:
-                "sidebar"
+                "contact"
                 "content"
+                "certifications"
+                "languages"          ;      
+                grid-template-rows:  1fr;
         }
-
+        
         @include mq($from: tablet) {
             grid-template-columns: 1fr 2fr;
             grid-template-areas:
-                "sidebar content content content"
+                "contact content content "
+                "languages content content "
+                "certifications content content"
+                ". content content ";
+            grid-template-rows: 40rem 10rem 40rem 1fr;
         }
 
         @include mq($from: wide) {
             grid-template-columns: 1fr 3fr;
             grid-template-areas:
-                "sidebar  content content content"
-        }
+            "contact content content content"
+            "languages content content content"
+            "certifications content content content"
+            ". content content content";
+            grid-template-rows: 40rem 10rem 40rem 1fr;
+        }        
     }
 
-    .o-content-grid-area {
-        grid-area: content;
-        display: grid;
-        grid-template-columns: 1fr;
+    .l-content {
         background-color: $whitish;
         padding: 1.5rem;
         color: $dark-brownish;
+        grid-area: content;
+    }
+
+    .l-sidebar {
+        padding: 0.5rem;
+
+        ul {
+            list-style-type: none;
+        }
+
+        .c-icon {
+            background-color: $dark-brownish;
+            stroke: $whitish;
+            fill: $whitish;
+        }
+
+        .c-resume-item {
+            border-color: $whitish;
+
+            &:first-of-type:before {
+                border-color: $whitish;
+            }
+
+            &:last-of-type:after {
+                border-color: $whitish;
+            }
+        }
     }
 
     .c-resume-section {
@@ -194,25 +230,41 @@
     }
 
     .c-summary {
-        padding-left: 3.5rem;
+        padding-left: 0.5rem;
     }
 
-    .c-certification__date {
+    .c-summary__icon{
+        vertical-align: bottom;
+    }
+
+    .certifications{
+        grid-area: certifications;
+    }
+
+    .c-certifications-item {
+        border-color: $whitish;
+    }
+
+    .c-certifications-item__date {
         color: $tealish;
         font-weight: bold;
     }
 
-    .c-certification__name {
+    .c-certifications-item__name {
         color: $whitish;
     }
 
-    .c-certifications__item {
-        border-color: $whitish;
-    }
-
     .languages {
+        grid-area: languages;
         grid-template-columns: 1fr;
-        grid-template-areas: "header""content"
+        grid-template-areas: 
+        "header"
+        "content";
+
+        ul{
+            margin-top:0;
+            padding-left: 1.5rem;
+        }
     }
 
     .language__name {
@@ -224,40 +276,7 @@
     .language__fluency {
         color: $whitish;
     }
-
-    .o-sidebar-grid-area{
-        grid-area: sidebar;
-    }
     
-    .o-sidebar {
-        background-color: $dark-brownish;
-        padding: 0.5rem;
-
-        ul {
-            list-style-type: none;
-        }
-
-        .c-icon {
-            background-color: $dark-brownish;
-            stroke: $whitish;
-            fill: $whitish;
-        }
-
-        .c-resume-item {
-            border-color: $whitish;
-
-            &:first-of-type:before {
-                border-color: $whitish;
-            }
-
-            &:last-of-type:after {
-                border-color: $whitish;
-            }
-        }
-    }
-
-
-
     .applicant__name {
         color: $blueish;
         text-transform: uppercase;
@@ -270,6 +289,7 @@
     }
 
     .contact {
+        grid-area: contact;
         text-align: center;
 
         ul {

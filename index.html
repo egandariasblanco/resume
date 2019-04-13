@@ -3,29 +3,14 @@ layout: default
 ---
 {% include symbol-defs.svg %}
 
-<div class="o-grid-layout">
-  <div class="o-sidebar o-sidebar-grid-area">
-    <div>
-      <aside>
-        {% include resume/contact.html %}
-      </aside>
-    </div>
-    <div>
-        <aside>
-          {% include resume/languages.html %}
-        </aside>
-      </div>
-    <div>
-      <aside>
-        {% include resume/certifications.html %}
-      </aside>
-    </div>
-  </div>
-  <div class="o-content-grid-area">
+<div class="l-grid">
+  {% include resume/contact.html %}
+  {% include resume/languages.html %}
+  {% include resume/certifications.html %}
+  <article class="l-content">
     {% include resume/summary.html %}
     {% include resume/work.html %}
     {% include resume/projects.html %}
     {% include resume/education.html %}
-  </div>
-
+  </article>
 </div>
